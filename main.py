@@ -23,6 +23,8 @@ class App(tk.Frame):
         self.speedEntry = tk.Entry(self.root)
         self.submitBtn = tk.Button(self.root, text="Convert", command=self.getInput)
         self.quitBtn = tk.Button(self.root, text="Cancel", command=self.root.destroy)
+        self.spaceEntry = tk.Entry(self.root)
+        self.spaceLabel = Label(self.root, text="Spacing", font=("Khmer UI",15))
 
         #Widget Placement
         self.textLabel.grid(row=0, column=0, sticky=W, pady=2)
@@ -31,9 +33,11 @@ class App(tk.Frame):
         self.depthEntry.grid(row=1, column=1, sticky=W, pady=2)
         self.speedLabel.grid(row=2, column=0, sticky=W, pady=2)
         self.speedEntry.grid(row=2, column=1, sticky=W, pady=2)
-        self.boxCheck.grid(row=3, column=0, sticky=W, columnspan=2)
-        self.quitBtn.grid(row=3, column=2, sticky=E)
-        self.submitBtn.grid(row=3, column=3, sticky=E)
+        self.spaceLabel.grid(row=3, column=0, sticky=W, pady=2)
+        self.spaceEntry.grid(row=3, column=1, sticky=W, pady=2)
+        self.boxCheck.grid(row=4, column=0, sticky=W, columnspan=2)
+        self.quitBtn.grid(row=4, column=2, sticky=E)
+        self.submitBtn.grid(row=4, column=3, sticky=E)
 
         self.root.mainloop()
 
@@ -42,13 +46,15 @@ class App(tk.Frame):
         inputTxt = self.textEntry.get()
         inputZ = self.depthEntry.get()
         inputF = self.speedEntry.get()
-        if(inputTxt != "" and inputZ != "" and inputF != "" and float(inputZ) and inputF.isdigit()):
+        inputSpace = self.spaceEntry.get()
+        if(inputTxt != "" and inputZ != "" and inputF != "" and float(inputZ) and inputF.isdigit() and inputSpace.isdigit()):
             inputTxt = inputTxt.upper()
             inputZ = float(inputZ)
             inputF = int(inputF)
             self.textEntry.delete(0, 'end')
             self.depthEntry.delete(0, 'end')
             self.speedEntry.delete(0, 'end')
+            self.spaceEntry.delete(0, 'end')
             try:
                 file_exists = os.path.exists('output.txt')
                 if(file_exists == True):
@@ -56,7 +62,8 @@ class App(tk.Frame):
             except:
                  messagebox.showerror("Error", "Unable to Proceed, please remove output.txt")
             #split text
-            formula.passText(inputTxt, 29, 20, inputF, inputZ)
+            #y is always 0 and x will always star from left side of the character 
+            formula.passText(inputTxt, 20, 0, inputF, inputZ,inputSpace)
             formula.finalDraw()
 
             generate.convert()
