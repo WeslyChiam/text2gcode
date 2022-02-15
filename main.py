@@ -35,7 +35,7 @@ class App(tk.Frame):
         self.speedEntry.grid(row=2, column=1, sticky=W, pady=2)
         self.spaceLabel.grid(row=3, column=0, sticky=W, pady=2)
         self.spaceEntry.grid(row=3, column=1, sticky=W, pady=2)
-        self.boxCheck.grid(row=4, column=0, sticky=W, columnspan=2)
+        #self.boxCheck.grid(row=4, column=0, sticky=W, columnspan=2)
         self.quitBtn.grid(row=4, column=2, sticky=E)
         self.submitBtn.grid(row=4, column=3, sticky=E)
 
