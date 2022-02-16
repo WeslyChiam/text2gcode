@@ -16,7 +16,8 @@ class App(tk.Frame):
 
         self.textLabel = Label(self.root, text="Text", font=("Khmer UI",15))
         self.textEntry = tk.Entry(self.root)
-        self.boxCheck = tk.Checkbutton(self.root, text="Include Box Surround")
+        self.box = IntVar(self.root)
+        self.boxCheck = tk.Checkbutton(self.root, text="Include Box Surround", variable=self.box)
         self.depthLabel = Label(self.root, text="Z:", font=("Khmer UI",15))
         self.depthEntry = tk.Entry(self.root)
         self.speedLabel = Label(self.root, text="F:", font=("Khmer UI",15))
@@ -35,7 +36,7 @@ class App(tk.Frame):
         self.speedEntry.grid(row=2, column=1, sticky=W, pady=2)
         self.spaceLabel.grid(row=3, column=0, sticky=W, pady=2)
         self.spaceEntry.grid(row=3, column=1, sticky=W, pady=2)
-        #self.boxCheck.grid(row=4, column=0, sticky=W, columnspan=2)
+        self.boxCheck.grid(row=4, column=0, sticky=W, columnspan=2)
         self.quitBtn.grid(row=4, column=2, sticky=E)
         self.submitBtn.grid(row=4, column=3, sticky=E)
 
@@ -64,6 +65,8 @@ class App(tk.Frame):
             #split text
             #y is always 0 and x will always star from left side of the character 
             formula.passText(inputTxt, 20, 0, inputF, inputZ,inputSpace)
+            if(self.box.get() == 1):
+                formula.drawBox(inputZ, inputF)
             formula.finalDraw()
 
             generate.convert()

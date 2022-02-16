@@ -1079,14 +1079,480 @@ def draw3(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace) 
     
-#def draw4
-#def draw5
-#def draw6
-#def draw7
-#def draw8
-#def draw9
-#def draw0
-#def drawLine
+def draw4(x, y, f, z):
+    y+=5
+    setpoint(x, y, f)
+    down(z, f)
+    x+=5
+    linear(x, y, f)
+    y-=5
+    linear(x, y, f)
+    x+=2
+    linear(x, y, f)
+    y+=5
+    linear(x, y, f)
+    x+=2
+    linear(x, y, f)
+    y+=2
+    linear(x, y, f)
+    x-=2
+    linear(x, y, f)
+    y+=10
+    linear(x, y, f)
+    x-=2
+    linear(x, y, f)
+    x-=5
+    y-=10
+    linear(x, y, f)
+    y-=2
+    linear(x, y, f)
+    up(z, f)
+    x+=2
+    y+=2
+    setpoint(x, y, f)
+    down(z, f)
+    x+=3
+    linear(x, y, f)
+    y+=7
+    linear(x, y, f)
+    x-=3
+    y-=7
+    linear(x, y, f)
+    up(z, f)
+    leftSpaceArr.append(leftSpace)
+    rightSpaceArr.append(rightSpace) 
+    
+def draw5(x, y, f, z):
+    y+=17
+    setpoint(x, y, f)
+    down(z, f)
+    y-=8
+    linear(x, y, f)
+    x+=3
+    linear(x, y, f)
+    r=4
+    x+=r
+    y-=r
+    clockwiseWthRad(x, y, r, f)
+    r=3
+    x-=r
+    y-=r
+    clockwiseWthRad(x, y, r, f)
+    x-=4
+    linear(x, y, f)
+    y-=2
+    linear(x, y, f)
+    x+=3
+    linear(x, y, f)
+    r=5
+    x+=r
+    y+=r
+    anticlockwiseWthRad(x, y, r, f)
+    y+=1
+    linear(x, y, f)
+    r=5
+    x-=r
+    y+=r
+    anticlockwiseWthRad(x, y, r, f)
+    x-=1
+    linear(x, y, f)
+    y+=4
+    linear(x, y, f)
+    x+=6
+    linear(x, y, f)
+    y+=2
+    linear(x, y, f)
+    x-=8
+    linear(x, y, f)
+    up(z, f)
+    leftSpaceArr.append(leftSpace)
+    rightSpaceArr.append(rightSpace) 
+    
+def draw6(x, y, f, z):
+    y+=2.5
+    setpoint(x, y, f)
+    down(z, f)
+    r=2.5
+    x+=r
+    y-=r
+    anticlockwiseWthRad(x, y, r, f)
+    x+=5
+    linear(x, y, f)
+    r=2.5
+    x+=r
+    y+=r
+    anticlockwiseWthRad(x, y, r, f)
+    y+=5
+    linear(x, y, f)
+    r=2.5
+    x-=r
+    y+=r
+    anticlockwiseWthRad(x, y, r, f)
+    x-=5
+    linear(x, y, f)
+    up(z, f)
+    x-=2.5
+    y-=7.5
+    setpoint(x, y, f)
+    down(z, f)
+    y+=15
+    linear(x, y, f)
+    r=2.5
+    x+=r
+    y+=r
+    clockwiseWthRad(x, y, r, f)
+    x+=5
+    linear(x, y, f)
+    r=2.5
+    x+=r
+    y-=r
+    clockwiseWthRad(x, y, r, f)
+    y-=2
+    linear(x, y, f)
+    x-=2
+    linear(x, y, f)
+    y+=2
+    linear(x, y, f)
+    r=1.5
+    x-=(r-1)
+    y+=(r-0.5)
+    anticlockwiseWthRad(x, y, r, f)
+    x-=5
+    linear(x, y, f)
+    r=1.5
+    x-=(r-1)
+    y-=r
+    anticlockwiseWthRad(x, y, r, f)
+    y-=8
+    linear(x, y, f)
+    r=1.5
+    x+=(r-1)
+    y+=(r-0.5)
+    clockwiseWthRad(x, y, r, f)
+    up(z, f)
+    y-=7.5
+    setpoint(x, y, f)
+    down(z, f)
+    r=1.5
+    x+=r
+    y-=(r-0.5)
+    anticlockwiseWthRad(x, y, r, f)
+    x+=3
+    linear(x, y, f)
+    r=1.5
+    x+=r
+    y+=(r-0.5)
+    anticlockwiseWthRad(x, y, r, f)
+    y+=5
+    linear(x, y, f)
+    r=1.5
+    x-=r
+    y+=r
+    anticlockwiseWthRad(x, y, r, f)
+    x-=3
+    linear(x, y, f)
+    r=1.5
+    x-=r
+    y-=r
+    anticlockwiseWthRad(x, y, r, f)
+    y-=5
+    linear(x, y, f)
+    up(z, f)
+    leftSpaceArr.append(leftSpace)
+    rightSpaceArr.append(rightSpace)     
+    
+def draw7(x, y, f, z):
+    y+=20
+    setpoint(x, y, f)
+    down(z, f)
+    x+=10
+    linear(x, y, f)
+    y-=2
+    linear(x, y, f)
+    x-=5 
+    y-=18
+    linear(x, y, f)
+    x-=2
+    linear(x, y, f)
+    x+=5
+    y+=18
+    linear(x, y, f)
+    x-=8
+    linear(x, y, f)
+    y+=2
+    linear(x, y, f)
+    up(z, f)
+    leftSpaceArr.append(leftSpace)
+    rightSpaceArr.append(rightSpace)  
+   
+def draw8(x, y, f, z):
+    y+=2.5
+    setpoint(x, y, f)
+    down(z, f)
+    r=2.5
+    x+=r
+    y-=r
+    anticlockwiseWthRad(x, y, r, f)
+    x+=5
+    linear(x, y, f)
+    r=2.5
+    x+=r
+    y+=r
+    anticlockwiseWthRad(x, y, r, f)
+    y+=5
+    linear(x, y, f)
+    r=2.5
+    x-=r
+    y+=r
+    anticlockwiseWthRad(x, y, r, f)
+    r=2.5
+    x+=r
+    y+=r
+    anticlockwiseWthRad(x, y, r, f)
+    y+=5
+    linear(x, y, f)
+    r=2.5
+    x-=r
+    y+=r
+    anticlockwiseWthRad(x, y, r, f)
+    x-=5
+    linear(x, y, f)
+    r=2.5
+    x-=r
+    y-=r
+    anticlockwiseWthRad(x, y, r, f)
+    y-=5
+    linear(x, y, f)
+    r=2.5
+    x+=r
+    y-=r
+    anticlockwiseWthRad(x, y, r, f)
+    r=2.5 
+    x-=r
+    y-=r
+    anticlockwiseWthRad(x, y, r, f)
+    y-=5
+    linear(x, y, f)
+    up(z, f)
+    x+=2
+    y+=1
+    setpoint(x, y, f)
+    down(z, f)
+    r=1.5
+    x+=r
+    y-=r
+    anticlockwiseWthRad(x, y, r, f)
+    x+=3
+    linear(x, y, f)
+    r=1.5
+    x+=r
+    y+=r
+    anticlockwiseWthRad(x, y, r, f)
+    y+=3
+    linear(x, y, f)
+    r=1.5
+    x-=r
+    y+=r
+    anticlockwiseWthRad(x, y, r, f)
+    x-=3
+    linear(x, y, f)
+    r=1.5
+    x-=r
+    y-=r
+    anticlockwiseWthRad(x, y, r, f)
+    y-=3
+    linear(x, y, f)
+    up(z,f)
+    y+=10
+    setpoint(x, y, f)
+    down(z, f)
+    r=1.5
+    x+=r
+    y-=r
+    anticlockwiseWthRad(x, y, r, f)
+    x+=3
+    linear(x, y, f)
+    r=1.5
+    x+=r
+    y+=r
+    anticlockwiseWthRad(x, y, r, f)
+    y+=3
+    linear(x, y, f)
+    r=1.5
+    x-=r
+    y+=r
+    anticlockwiseWthRad(x, y, r, f)
+    x-=3
+    linear(x, y, f)
+    r=1.5
+    x-=r
+    y-=r
+    anticlockwiseWthRad(x, y, r, f)
+    y-=3
+    linear(x, y, f)
+    up(z, f)
+    leftSpaceArr.append(leftSpace)
+    rightSpaceArr.append(rightSpace)   
+        
+def draw9(x, y, f, z):
+    y+=2.5
+    setpoint(x, y, f)
+    down(z, f)
+    x+=2.5
+    y-=2.5
+    linear(x, y, f)
+    x+=5
+    linear(x, y, f)
+    r=2.5
+    x+=r
+    y+=r
+    anticlockwiseWthRad(x, y, r, f)
+    y+=15
+    linear(x, y, f)
+    r=2.5
+    x-=r
+    y+=r
+    anticlockwiseWthRad(x, y, r, f)
+    x-=5
+    linear(x, y, f)
+    r=2.5
+    x-=r
+    y-=r
+    anticlockwiseWthRad(x, y, r, f)
+    y-=5
+    linear(x, y, f)
+    r=2.5
+    x+=r
+    y-=r
+    anticlockwiseWthRad(x, y, r, f)
+    x+=5
+    linear(x, y, f)
+    y-=7.5
+    linear(x, y, f)
+    x-=7.5
+    linear(x, y, f)
+    up(z, f)
+    x+=7.5
+    y+=11
+    setpoint(x, y, f)
+    down(z, f)
+    r=1.5
+    x-=r
+    y-=r
+    clockwiseWthRad(x, y, r, f)
+    x-=2.5
+    linear(x, y, f)
+    r=1.5
+    x-=r
+    y+=r
+    clockwiseWthRad(x, y, r, f)
+    y+=3
+    linear(x, y, f)
+    r=1.5
+    x+=r
+    y+=r
+    clockwiseWthRad(x, y, r, f)
+    x+=2.5
+    linear(x, y, f)
+    r=1.5
+    x+=r
+    y-=r
+    clockwiseWthRad(x, y, r, f)
+    y-=3
+    linear(x, y, f)
+    up(z, f)
+    leftSpaceArr.append(leftSpace)
+    rightSpaceArr.append(rightSpace)   
+    
+def draw0(x, y, f, z):
+    y+=2.5
+    setpoint(x, y, f)
+    down(z, f)
+    r=2.5
+    x+=r
+    y-=r
+    anticlockwiseWthRad(x, y, r, f)
+    x+=5
+    linear(x, y, f)
+    r=2.5
+    x+=r
+    y+=r
+    anticlockwiseWthRad(x, y, r, f)
+    y+=15
+    linear(x, y, f)
+    r=2.5
+    x-=r
+    y+=r
+    anticlockwiseWthRad(x, y, r, f)
+    x-=5
+    linear(x, y, f)
+    r=2.5
+    x-=r
+    y-=r
+    anticlockwiseWthRad(x, y, r, f)
+    y-=15
+    linear(x, y, f)
+    up(z, f)
+    x+=2
+    y+=1
+    setpoint(x, y, f)
+    down(z, f)
+    r=1.5
+    x+=r
+    y-=r
+    anticlockwiseWthRad(x, y, r, f)
+    x+=3
+    linear(x, y, f)
+    r=1.5
+    x+=r
+    y+=r
+    anticlockwiseWthRad(x, y, r, f)
+    y+=13
+    linear(x, y, f)
+    r=1.5
+    x-=r
+    y+=r
+    anticlockwiseWthRad(x, y, r, f)
+    x-=3
+    linear(x, y, f)
+    r=1.5
+    x-=r
+    y-=r
+    anticlockwiseWthRad(x, y, r, f)
+    y-=13
+    linear(x, y, f)
+    up(z, f)
+    leftSpaceArr.append(leftSpace)
+    rightSpaceArr.append(rightSpace) 
+    
+def drawHypen(x, y, f, z):
+    space = globals()
+    x+=2 
+    y+=10
+    setpoint(x, y, f)
+    down(z, f)
+    x+=5
+    linear(x, y, f)
+    y+=2
+    linear(x, y, f)
+    x-=5
+    linear(x, y, f)
+    y-=2
+    linear(x, y, f)
+    up(z, f)
+    space['rightSpace'] +=2 
+    leftSpaceArr.append(leftSpace)
+    rightSpaceArr.append(rightSpace)
+
+def drawBox(z, f):
+    tmpArr.append("G00X17Y-3")
+    down(z, f)
+    tmpArr.append("G01X17Y23")
+    tmpRightSpace = rightSpace+3
+    tmpArr.append("G01X"+str(round(tmpRightSpace,2))+"Y23"+"F"+str(round(f,2)))
+    tmpArr.append("G01X"+str(round(tmpRightSpace,2))+"Y-3"+"F"+str(round(f,2)))
+    tmpArr.append("G01X17Y-3")
+    up(z, f)
     
 def finalDraw():
     with open("output.txt","w") as txt:
@@ -1153,18 +1619,32 @@ def convert(text, x, y, f, z):
             draw2(x, y, f, z)
         case '3':
             draw3(x, y, f, z)
+        case '4':
+            draw4(x, y, f, z)
+        case '5':
+            draw5(x, y, f, z)
+        case '6':
+            draw6(x, y, f, z)
+        case '7':
+            draw7(x, y, f, z)
+        case '8':
+            draw8(x, y, f, z)
+        case '9':
+            draw9(x, y, f, z)
+        case '0':
+            draw0(x, y, f, z)
+        case '-':
+            drawHypen(x, y, f, z)
 
 def passText(text, x, y, f, z, space):
     txt = list(text)
-    print(txt)
     for char in txt:
         if(x < rightSpace):
             x = rightSpace + int(space)
             convert(char, x, y, f, z)
         else:
             convert(char, x, y, f, z)
-    print(rightSpaceArr)
-    print(rightSpace)
+
    
 
 
