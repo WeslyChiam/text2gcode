@@ -23,14 +23,6 @@ def linear(x, y, f):
     checkSpace(leftSpace, rightSpace, x)
     tmpArr.append("G01X"+str(round(x,2))+"Y"+str(round(y,2))+"F"+str(round(f,2)))
 
-def clockwise(x, y, radi, radj, f):
-     checkSpace(leftSpace, rightSpace, x)
-     tmpArr.append("G02X"+str(round(x,2))+"Y"+str(round(y,2))+"I"+str(round(radi,2))+"J"+str(round(radj,2))+"F"+str(round(f,2)))
-
-def anticlockwise(x, y, radi, radj, f):
-    checkSpace(leftSpace, rightSpace, x)
-    tmpArr.append("G03X"+str(round(x,2))+"Y"+str(round(y,2))+"I"+str(round(radi,2))+"J"+str(round(radj,2))+"F"+str(round(f,2)))
-
 def clockwiseWthRad(x, y, r, f):
     checkSpace(leftSpace, rightSpace, x)
     tmpArr.append("G02X"+str(round(x,2))+"Y"+str(round(y,2))+"R"+str(round(r,2))+"F"+str(round(f,2)))
@@ -46,171 +38,178 @@ def setpoint(x, y, f):
     checkSpace(leftSpace, rightSpace, x)
     tmpArr.append("G00X"+str(x)+"Y"+str(y)+"F"+str(f))
 
-def drawA(x, y, f, z): #UPDATED FORMULA AND TEST RUN 
+def startpoint(z):
+    tmpArr.append("G00Z"+str(round(z,2)))
+    tmpArr.append("M03S300")
+
+def drawA(x, y, f, z): #UPDATED FORMULA AND TEST RUN
+    startpoint(z)
     setpoint(x, y, f)
     down(z, f)
-    x+=7.6
-    y+=20
+    x+=3
+    y+=10
     linear(x, y, f)
-    x+=7.6
-    y-=20
+    x+=3
+    y-=10
     linear(x, y, f)
     x-=1
     linear(x, y, f)
-    x-=6.6
-    y+=17
+    x-=2
+    y+=6.5
     linear(x, y, f)
-    x-=6.6
-    y-=17
+    x-=2
+    y-=6.5
     linear(x, y, f)
     x-=1
     linear(x, y, f)
     up(z, f)
-    x+=2.9
-    y+=5.7
+    x+=1.5
+    y+=2
     setpoint(x, y, f)
     down(z, f)
-    x+=9.5
+    x+=3
     linear(x, y, f)
     up(z, f)
-    x-=10.4
-    y-=0.9
+    x-=0.5
+    y+=1
     setpoint(x, y, f)
     down(z, f)
-    x+=11.3
+    x-=2.1
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)
 
 def drawB(x, y, f, z): #UPDATED FORMULA AND TEST RUN 
+    startpoint(z)
     setpoint(x, y, f)
     down(z, f)
-    y+=20
+    y+=10
     linear(x, y, f)
-    up(z, f)
-    x+=1
-    y-=1
-    up(z, f)
-    setpoint(x, y, f)
-    down(z, f)
-    y-=18
+    x+=3.25
     linear(x, y, f)
-    x+=1.5
-    linear(x, y, f)
-    r=4.25
-    y+=(r*2)
-    anticlockwiseWthRad(x, y, r, f)
-    x-=1.5
-    linear(x, y, f)
-    x+=1.5
-    linear(x, y, f)
-    r=5.25
-    x+=r
-    y+=r
-    anticlockwiseWthRad(x, y, r, f)
-    r=5.25
-    x-=r
-    y+=5.25
-    anticlockwiseWthRad(x, y, r, f)
-    x-=2.5
-    linear(x, y, f)
-    up(z, f)
-    x+=1
-    y-=1
-    setpoint(x, y, f)
-    down(z, f)   
-    x+=1.5
-    linear(x, y, f)
-    r=4.25
-    y-=(r*2)
-    clockwiseWthRad(x, y, r, f)
-    x-=1.5
-    linear(x, y, f)
-    x+=1.5
-    linear(x, y, f)
-    r=5.25
+    r=2.75
     x+=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    r=5.25
+    r=2.75
     x-=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    x-=2.5
+    x-=2.25
+    linear(x, y, f)
+    x+=2.25
+    linear(x, y, f)
+    r=1.75
+    x+=r
+    y-=r
+    clockwiseWthRad(x, y, r, f)
+    r=1.75
+    x-=r
+    y-=r
+    clockwiseWthRad(x, y, r, f)
+    x-=2.25
+    linear(x, y, f)
+    y+=8
+    linear(x, y, f)
+    x+=2.25
+    linear(x, y, f)
+    r=1.75
+    x+=r
+    y-=r
+    clockwiseWthRad(x, y, r, f)
+    r=1.75
+    x-=r
+    y-=r
+    clockwiseWthRad(x, y, r, f)
+    x-=2.25
+    linear(x, y, f)
+    x+=2.25
+    linear(x, y, f)
+    r=2.75
+    x+=r
+    y-=r
+    clockwiseWthRad(x, y, r, f)
+    r=2.75
+    x-=r
+    y-=r
+    clockwiseWthRad(x, y, r, f)
+    x-=3.25
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)
     
 def drawC(x, y, f, z): #UPDATED FORMULA AND TEST RUN
-    y+=5.25
+    startpoint(z)
+    y+=2 
     setpoint(x, y, f)
     down(z, f)
-    r=5.25
+    r=2
     x+=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    x+=2.35
+    x+=2
     linear(x, y, f)
-    r=5.25
+    r=2
     x+=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
     x-=1
     linear(x, y, f)
-    r=4.25
+    r=1
     x-=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    x-=2.35
+    x-=2
     linear(x, y, f)
-    r=4.25
+    r=1
     x-=r
     y+=r
     clockwiseWthRad(x, y, r, f)
-    y+=9.6
+    y+=6
     linear(x, y, f)
-    r=4.25
+    r=1
     x+=r
     y+=r
     clockwiseWthRad(x, y, r, f)
     x+=2
     linear(x, y, f)
-    r=4.25
+    r=1
     x+=r
     y-=r
     clockwiseWthRad(x, y, r, f)
     x+=1
     linear(x, y, f)
-    r=5.25
+    r=2
     x-=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
     x-=2
     linear(x, y, f)
-    r=5.25
+    r=2
     x-=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    y-=9.55
+    y-=6
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)
 
 def drawD(x, y, f, z): #TEST RUN DONE
+    startpoint(z)
     setpoint(x, y, f)
     down(z, f)
-    y+=20
+    y+=10
     linear(x, y, f)
     x+=1
     linear(x, y, f)
-    r=10
+    r=5
     x+=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    r=10
+    r=5
     x-=r
     y-=r
     clockwiseWthRad(x, y, r, f)
@@ -221,66 +220,73 @@ def drawD(x, y, f, z): #TEST RUN DONE
     y+=1
     setpoint(x, y, f)
     down(z, f)
-    y+=18
+    y+=8
     linear(x, y, f)
-    r=9
-    y-=(r*2)
+    r=4
+    x+=r
+    y-=r
+    clockwiseWthRad(x, y, r, f)
+    r=4
+    x-=r
+    y-=r
     clockwiseWthRad(x, y, r, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)
 
 def drawE(x, y, f, z): #TEST RUN DONE
+    startpoint(z)
     setpoint(x, y, f)
     down(z, f)
-    y+=20
+    y+=10
     linear(x, y, f)
-    x+=10
-    linear(x, y, f)
-    y-=1
-    linear(x, y, f)
-    x-=9
-    linear(x, y, f)
-    y-=9
-    linear(x, y, f)
-    x+=9
+    x+=6
     linear(x, y, f)
     y-=1
     linear(x, y, f)
-    x-=9
+    x-=5
     linear(x, y, f)
-    y-=8
+    y-=3.5
     linear(x, y, f)
-    x+=9
+    x+=5
     linear(x, y, f)
     y-=1
     linear(x, y, f)
-    x-=10
+    x-=5
+    linear(x, y, f)
+    y-=3.5
+    linear(x, y, f)
+    x+=5
+    linear(x, y, f)
+    y-=1
+    linear(x, y, f)
+    x-=6
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)
 
 def drawF(x, y, f, z): #TEST RUN DONE
+    startpoint(z)
     setpoint(x, y, f)
     down(z, f)
-    y+=20
+    y+=10
     linear(x, y, f)
-    x+=10
-    linear(x, y, f)
-    y-=1
-    linear(x, y, f)
-    x-=9
-    linear(x, y, f)
-    y-=9
-    linear(x, y, f)
-    x+=9
+    x+=6
     linear(x, y, f)
     y-=1
     linear(x, y, f)
-    x-=9
+    x-=5
     linear(x, y, f)
-    y-=9
+    y-=3.5
+    linear(x, y, f)
+    x+=5
+    linear(x, y, f)
+    y-=1
+    linear(x, y, f)
+    x-=5
+    linear(x, y, f)
+    y-=4.5
     linear(x, y, f)
     x-=1
     linear(x, y, f)
@@ -289,124 +295,127 @@ def drawF(x, y, f, z): #TEST RUN DONE
     rightSpaceArr.append(rightSpace)
 
 def drawG(x, y, f, z): #TEST RUN DONE
-    y+=5.25
-    setpoint(x, y, f)#
-    down(z, f)#
-    r = 5.25
+    startpoint(z)
+    y+=2 
+    setpoint(x, y, f)
+    down(z, f)
+    r=2
     x+=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    r = 5.25
+    x+=2
+    linear(x, y, f)
+    r=2
     x+=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
     y+=2
     linear(x, y, f)
-    x+=1
-    linear(x, y, f)
-    y-=3
-    linear(x, y, f)
-    x+=1
-    linear(x, y, f)
-    y+=4
-    linear(x, y, f)
-    x-=5
+    x-=2
     linear(x, y, f)
     y-=1
     linear(x, y, f)
-    x+=2
+    x+=1
     linear(x, y, f)
-    y-=2
+    y-=1
     linear(x, y, f)
-    r=4.25
+    r=1
     x-=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    r=4.25
+    x-=2
+    linear(x, y, f)
+    r=1
     x-=r
     y+=r
     clockwiseWthRad(x, y, r, f)
-    y+=9.6
+    y+=6
     linear(x, y, f)
-    r=4.25
+    r=1
     x+=r
     y+=r
     clockwiseWthRad(x, y, r, f)
-    r=4.25
+    x+=2
+    linear(x, y, f)
+    r=1
     x+=r
     y-=r
     clockwiseWthRad(x, y, r, f)
     x+=1
     linear(x, y, f)
-    r=5.25
+    r=2
     x-=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    r=5.25
+    x-=2
+    linear(x, y, f)
+    r=2
     x-=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    y-=9.6
-    linear(x, y, f)   
+    y-=6
+    linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)
 
 def drawH(x, y, f, z):
+    startpoint(z)
     setpoint(x, y, f)
     down(z, f)
-    y+=20
+    y+=10
     linear(x, y, f)
     x+=1
     linear(x, y, f)
-    y-=9.5
+    y-=4.5
     linear(x, y, f)
-    x+=5
+    x+=4
     linear(x, y, f)
-    y+=9.5
+    y+=4.5
     linear(x, y, f)
     x+=1
     linear(x, y, f)
-    y-=20
+    y-=10
     linear(x, y, f)
     x-=1
     linear(x, y, f)
-    y+=9.5
+    y+=4.5
     linear(x, y, f)
-    x-=5
+    x-=4
     linear(x, y, f)
-    y-=9.5
+    y-=4.5
     linear(x, y, f)
     x-=1
-    linear(x, y, f)
+    linear(x, y, f)  
     up(z, f)
     leftSpaceArr.append(leftSpace) #J
     rightSpaceArr.append(rightSpace)
 
 def drawI(x, y, f, z):
+    startpoint(z)
     setpoint(x, y, f)
     down(z, f)
-    x+=5
+    x+=6
     linear(x, y, f)
     y+=1
     linear(x, y, f)
-    x-=1.5
+    x-=2.5
     linear(x, y, f)
-    y+=18
+    y+=8
     linear(x, y, f)
-    x+=1.5
+    x+=2.5
     linear(x, y, f)
     y+=1
     linear(x, y, f)
-    x-=5
+    x-=6
     linear(x, y, f)
     y-=1
     linear(x, y, f)
-    x+=1.5
+    x+=2.5
     linear(x, y, f)
-    y-=18
+    y-=8
     linear(x, y, f)
-    x-=1.5
+    x-=2.5
     linear(x, y, f)
     y-=1
     linear(x, y, f)
@@ -415,28 +424,35 @@ def drawI(x, y, f, z):
     rightSpaceArr.append(rightSpace)
 
 def drawJ(x, y, f, z):
-    y+=3.25
+    startpoint(z)
+    y+=2 
     setpoint(x, y, f)
     down(z, f)
-    r=3.25
-    x+=(r*2)
+    r=2
+    x+=r
+    y-=r
     anticlockwiseWthRad(x, y, r, f)
-    y+=15.75
-    linear(x, y, f)
     x+=2
     linear(x, y, f)
-    y+=1
+    r=2
+    x+=r
+    y+=r
+    anticlockwiseWthRad(x, y, r, f)
+    y+=8
     linear(x, y, f)
-    x-=5
+    x-=1
     linear(x, y, f)
-    y-=1
+    y-=8
     linear(x, y, f)
-    x+=2
+    r=1
+    x-=r
+    y-=r
+    clockwiseWthRad(x, y, r, f)
+    x-=2
     linear(x, y, f)
-    y-=15.75
-    linear(x, y, f)
-    r=2.25
-    x-=(r*2)
+    r=1
+    x-=r
+    y+=r
     clockwiseWthRad(x, y, r, f)
     x-=1
     linear(x, y, f)
@@ -445,31 +461,32 @@ def drawJ(x, y, f, z):
     rightSpaceArr.append(rightSpace)
 
 def drawK(x, y, f, z):
+    startpoint(z)
     setpoint(x, y, f)
     down(z, f)
-    y+=20
+    y+=10
     linear(x, y, f)
     x+=1
     linear(x, y, f)
-    y-=9.5
+    y-=4
     linear(x, y, f)
-    x+=4.5
-    y+=9.5
+    x+=4
+    y+=4
     linear(x, y, f)
     x+=1
     linear(x, y, f)
-    x-=4.5
-    y-=9.5
+    x-=5
+    y-=5
     linear(x, y, f)
-    x+=4.5
-    y-=10.5
+    x+=5
+    y-=5
     linear(x, y, f)
     x-=1
     linear(x, y, f)
-    x-=4.5
-    y+=9.5
+    x-=4
+    y+=4 
     linear(x, y, f)
-    y-=9.5
+    y-=4
     linear(x, y, f)
     x-=1
     linear(x, y, f)
@@ -478,13 +495,14 @@ def drawK(x, y, f, z):
     rightSpaceArr.append(rightSpace)
 
 def drawL(x, y, f, z):
+    startpoint(z)
     setpoint(x, y, f)
     down(z, f)
-    y+=20
+    y+=10
     linear(x, y, f)
     x+=1
     linear(x, y, f)
-    y-=19
+    y-=9
     linear(x, y, f)
     x+=5
     linear(x, y, f)
@@ -497,35 +515,30 @@ def drawL(x, y, f, z):
     rightSpaceArr.append(rightSpace)
 
 def drawM(x, y, f, z):
+    startpoint(z)
     setpoint(x, y, f)
     down(z, f)
-    y+=20
+    y+=10
     linear(x, y, f)
-    x+=2
+    x+=3
+    y-=4
     linear(x, y, f)
-    x+=2.5
-    y-=14
+    x+=3
+    y+=4
     linear(x, y, f)
-    x+=2
-    y+=14
-    linear(x, y, f)
-    x+=2
-    linear(x, y, f)
-    y-=20
+    y-=10
     linear(x, y, f)
     x-=1
     linear(x, y, f)
-    y+=19
-    linear(x, y, f)#
+    y+=7
+    linear(x, y, f)
     x-=2
-    y-=17
+    y-=3
     linear(x, y, f)
-    x-=1
+    x-=2
+    y+=3
     linear(x, y, f)
-    x-=3.5
-    y+=17
-    linear(x, y, f)
-    y-=19
+    y-=7
     linear(x, y, f)
     x-=1
     linear(x, y, f)
@@ -534,27 +547,32 @@ def drawM(x, y, f, z):
     rightSpaceArr.append(rightSpace)
 
 def drawN(x, y, f, z):
+    startpoint(z)
     setpoint(x, y, f)
     down(z, f)
-    y+=20
+    y+=10
+    linear(x, y, f)
+    x+=5
+    y-=10
     linear(x, y, f)
     x+=1
     linear(x, y, f)
-    x+=7
-    y-=18
+    y+=10
     linear(x, y, f)
-    y+=18
+    x-=1
+    linear(x, y, f)
+    y-=10
+    linear(x, y, f)
+    y+=2
+    linear(x, y, f)
+    x-=4
+    y+=8
+    linear(x, y, f)
+    x-=1
     linear(x, y, f)
     x+=1
     linear(x, y, f)
-    y-=20
-    linear(x, y, f)
-    x-=2
-    linear(x, y, f)
-    x-=6
-    y+=16
-    linear(x, y, f)
-    y-=16
+    y-=10
     linear(x, y, f)
     x-=1
     linear(x, y, f)
@@ -563,64 +581,58 @@ def drawN(x, y, f, z):
     rightSpaceArr.append(rightSpace)
 
 def drawO(x, y, f, z):
-    y+=10
+    startpoint(z)
+    y+=5
     setpoint(x, y, f)
     down(z, f)
-    r=10
-    x+=(r*2)
+    r=5
+    x+=r
+    y-=r
     anticlockwiseWthRad(x, y, r, f)
-    r=10
-    x-=(r*2)
+    r=5
+    x+=r
+    y+=r
+    anticlockwiseWthRad(x, y, r, f)
+    r=5
+    x-=r
+    y+=r
+    anticlockwiseWthRad(x, y, r, f)
+    r=5
+    x-=r
+    y-=r
     anticlockwiseWthRad(x, y, r, f)
     up(z, f)
-    x+=3
+    x+=1
     setpoint(x, y, f)
     down(z, f)
-    r=7
-    x+=(r*2)
-    clockwiseWthRad(x, y, r, f)
-    r=7
-    x-=(r*2)
-    clockwiseWthRad(x, y, r, f)
+    r=4
+    x+=r
+    y-=r
+    anticlockwiseWthRad(x, y, r, f)
+    r=4
+    x+=r
+    y+=r
+    anticlockwiseWthRad(x, y, r, f)
+    r=4
+    x-=r
+    y+=r
+    anticlockwiseWthRad(x, y, r, f)
+    r=4
+    x-=r
+    y-=r
+    anticlockwiseWthRad(x, y, r, f) 
     up(z, f)
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)
 
 def drawP(x, y, f, z):
+    startpoint(z)
     setpoint(x, y, f)
     down(z, f)
-    y+=20
+    y+=10
     linear(x, y, f)
-    x+=2
-    linear(x, y, f)
-    r=5
-    x+=r
-    y-=r
-    clockwiseWthRad(x, y, r, f)
-    r=5
-    x-=r
-    y-=r
-    clockwiseWthRad(x, y, r, f)
-    x-=1
-    linear(x, y, f)
-    y-=10
-    linear(x, y, f)
-    x-=1
-    linear(x, y, f)
-    up(z, f)
-    x+=2
-    y+=19
-    setpoint(x, y, f)
-    down(z, f)
-    r=4
-    y-=(r*2)
-    clockwiseWthRad(x, y, r, f)
-    x-=1
-    linear(x, y, f)
-    y+=8
-    linear(x, y, f)
-    x+=1
-    linear(x, y, f)
+    
+    
     up(z, f)
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)
