@@ -6,7 +6,7 @@ Requirements:
   1. Python 3.10 or above(This .py script use match case statement, which is newly introduce in Python version 3.10)
   
 Notes: 
-  If no Python 3.10 or higher installed, it is recommended to use .exe from folder dist 
+  If no Python 3.10 or higher installed, it is recommended to use .exe 
   
 Steps:
   1. Run main.py or main.exe from dist folder 
