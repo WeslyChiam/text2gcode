@@ -46,35 +46,35 @@ def drawA(x, y, f, z): #UPDATED FORMULA AND TEST RUN
     startpoint(z)
     setpoint(x, y, f)
     down(z, f)
-    x+=3
-    y+=10
+    x+=(3*constantFontSize)
+    y+=(10*constantFontSize)
     linear(x, y, f)
-    x+=3
-    y-=10
+    x+=(3*constantFontSize)
+    y-=(10*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
-    x-=2
-    y+=6.5
+    x-=(2*constantFontSize)
+    y+=(6.5*constantFontSize)
     linear(x, y, f)
-    x-=2
-    y-=6.5
+    x-=(2*constantFontSize)
+    y-=(6.5*constantFontSize)
     linear(x, y, f)
-    x-=1
-    linear(x, y, f)
-    up(z, f)
-    x+=1.5
-    y+=2
-    setpoint(x, y, f)
-    down(z, f)
-    x+=3
+    x-=(1*constantFontSize)
     linear(x, y, f)
     up(z, f)
-    x-=0.5
-    y+=1
+    x+=(1.5*constantFontSize)
+    y+=(2*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    x-=2.1
+    x+=(3*constantFontSize)
+    linear(x, y, f)
+    up(z, f)
+    x-=(0.5*constantFontSize)
+    y+=(1*constantFontSize)
+    setpoint(x, y, f)
+    down(z, f)
+    x-=(2.1*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -84,57 +84,57 @@ def drawB(x, y, f, z): #UPDATED FORMULA AND TEST RUN
     startpoint(z)
     setpoint(x, y, f)
     down(z, f)
-    y+=10
+    y+=(10*constantFontSize)
     linear(x, y, f)
-    x+=3.25
+    x+=(3.25*constantFontSize)
     linear(x, y, f)
-    r=2.75
+    r=(2.75*constantFontSize)
     x+=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    r=2.75
+    r=(2.75*constantFontSize)
     x-=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    x-=2.25
+    x-=(2.25*constantFontSize)
     linear(x, y, f)
-    x+=2.25
+    x+=(2.25*constantFontSize)
     linear(x, y, f)
-    r=1.75
+    r=(1.75*constantFontSize)
     x+=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    r=1.75
+    r=(1.75*constantFontSize)
     x-=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    x-=2.25
+    x-=(2.25*constantFontSize)
     linear(x, y, f)
-    y+=8
+    y+=(8*constantFontSize)
     linear(x, y, f)
-    x+=2.25
+    x+=(2.25*constantFontSize)
     linear(x, y, f)
-    r=1.75
+    r=(1.75*constantFontSize)
     x+=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    r=1.75
+    r=(1.75*constantFontSize)
     x-=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    x-=2.25
+    x-=(2.25*constantFontSize)
     linear(x, y, f)
-    x+=2.25
+    x+=(2.25*constantFontSize)
     linear(x, y, f)
-    r=2.75
+    r=(2.75*constantFontSize)
     x+=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    r=2.75
+    r=(2.75*constantFontSize)
     x-=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    x-=3.25
+    x-=(3.25*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -142,56 +142,56 @@ def drawB(x, y, f, z): #UPDATED FORMULA AND TEST RUN
     
 def drawC(x, y, f, z): #UPDATED FORMULA AND TEST RUN
     startpoint(z)
-    y+=2 
+    y+=(2*constantFontSize) 
     setpoint(x, y, f)
     down(z, f)
-    r=2
+    r=(2*constantFontSize)
     x+=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    x+=2
+    x+=(2*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x+=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x-=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    x-=2
+    x-=(2*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x-=r
     y+=r
     clockwiseWthRad(x, y, r, f)
-    y+=6
+    y+=(6*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x+=r
     y+=r
     clockwiseWthRad(x, y, r, f)
-    x+=2
+    x+=(2*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x+=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    x+=1
+    x+=(1*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x-=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    x-=2
+    x-=(2*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x-=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    y-=6
+    y-=(6*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -201,32 +201,32 @@ def drawD(x, y, f, z): #TEST RUN DONE
     startpoint(z)
     setpoint(x, y, f)
     down(z, f)
-    y+=10
+    y+=(10*constantFontSize)
     linear(x, y, f)
-    x+=1
+    x+=(1*constantFontSize)
     linear(x, y, f)
-    r=5
+    r=(5*constantFontSize)
     x+=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    r=5
+    r=(5*constantFontSize)
     x-=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
     up(z, f)
-    x+=1
-    y+=1
+    x+=(1*constantFontSize)
+    y+=(1*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    y+=8
+    y+=(8*constantFontSize)
     linear(x, y, f)
-    r=4
+    r=(4*constantFontSize)
     x+=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    r=4
+    r=(4*constantFontSize)
     x-=r
     y-=r
     clockwiseWthRad(x, y, r, f)
@@ -238,29 +238,29 @@ def drawE(x, y, f, z): #TEST RUN DONE
     startpoint(z)
     setpoint(x, y, f)
     down(z, f)
-    y+=10
+    y+=(10*constantFontSize)
     linear(x, y, f)
-    x+=6
+    x+=(6*constantFontSize)
     linear(x, y, f)
-    y-=1
+    y-=(1*constantFontSize)
     linear(x, y, f)
-    x-=5
+    x-=(5*constantFontSize)
     linear(x, y, f)
-    y-=3.5
+    y-=(3.5*constantFontSize)
     linear(x, y, f)
-    x+=5
+    x+=(5*constantFontSize)
     linear(x, y, f)
-    y-=1
+    y-=(1*constantFontSize)
     linear(x, y, f)
-    x-=5
+    x-=(5*constantFontSize)
     linear(x, y, f)
-    y-=3.5
+    y-=(3.5*constantFontSize)
     linear(x, y, f)
-    x+=5
+    x+=(5*constantFontSize)
     linear(x, y, f)
-    y-=1
+    y-=(1*constantFontSize)
     linear(x, y, f)
-    x-=6
+    x-=(6*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -270,25 +270,25 @@ def drawF(x, y, f, z): #TEST RUN DONE
     startpoint(z)
     setpoint(x, y, f)
     down(z, f)
-    y+=10
+    y+=(10*constantFontSize)
     linear(x, y, f)
-    x+=6
+    x+=(6*constantFontSize)
     linear(x, y, f)
-    y-=1
+    y-=(1*constantFontSize)
     linear(x, y, f)
-    x-=5
+    x-=(5*constantFontSize)
     linear(x, y, f)
-    y-=3.5
+    y-=(3.5*constantFontSize)
     linear(x, y, f)
-    x+=5
+    x+=(5*constantFontSize)
     linear(x, y, f)
-    y-=1
+    y-=(1*constantFontSize)
     linear(x, y, f)
-    x-=5
+    x-=(5*constantFontSize)
     linear(x, y, f)
-    y-=4.5
+    y-=(4.5*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -296,64 +296,64 @@ def drawF(x, y, f, z): #TEST RUN DONE
 
 def drawG(x, y, f, z): #TEST RUN DONE
     startpoint(z)
-    y+=2 
+    y+=(2*constantFontSize) 
     setpoint(x, y, f)
     down(z, f)
-    r=2
+    r=(2*constantFontSize)
     x+=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    x+=2
+    x+=(2*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x+=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    y+=2
+    y+=(2*constantFontSize)
     linear(x, y, f)
-    x-=2
+    x-=(2*constantFontSize)
     linear(x, y, f)
-    y-=1
+    y-=(1*constantFontSize)
     linear(x, y, f)
-    x+=1
+    x+=(1*constantFontSize)
     linear(x, y, f)
-    y-=1
+    y-=(1*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x-=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    x-=2
+    x-=(2*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x-=r
     y+=r
     clockwiseWthRad(x, y, r, f)
-    y+=6
+    y+=(6*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x+=r
     y+=r
     clockwiseWthRad(x, y, r, f)
-    x+=2
+    x+=(2*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x+=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    x+=1
+    x+=(1*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x-=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    x-=2
+    x-=(2*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x-=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    y-=6
+    y-=(6*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -363,61 +363,61 @@ def drawH(x, y, f, z):
     startpoint(z)
     setpoint(x, y, f)
     down(z, f)
-    y+=10
+    y+=(10*constantFontSize)
     linear(x, y, f)
-    x+=1
+    x+=(1*constantFontSize)
     linear(x, y, f)
-    y-=4.5
+    y-=(4.5*constantFontSize)
     linear(x, y, f)
-    x+=4
+    x+=(4*constantFontSize)
     linear(x, y, f)
-    y+=4.5
+    y+=(4.5*constantFontSize)
     linear(x, y, f)
-    x+=1
+    x+=(1*constantFontSize)
     linear(x, y, f)
-    y-=10
+    y-=(10*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
-    y+=4.5
+    y+=(4.5*constantFontSize)
     linear(x, y, f)
-    x-=4
+    x-=(4*constantFontSize)
     linear(x, y, f)
-    y-=4.5
+    y-=(4.5*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)  
     up(z, f)
-    leftSpaceArr.append(leftSpace) #J
+    leftSpaceArr.append(leftSpace) 
     rightSpaceArr.append(rightSpace)
 
 def drawI(x, y, f, z):
     startpoint(z)
     setpoint(x, y, f)
     down(z, f)
-    x+=6
+    x+=(6*constantFontSize)
     linear(x, y, f)
-    y+=1
+    y+=(1*constantFontSize)
     linear(x, y, f)
-    x-=2.5
+    x-=(2.5*constantFontSize)
     linear(x, y, f)
-    y+=8
+    y+=(8*constantFontSize)
     linear(x, y, f)
-    x+=2.5
+    x+=(2.5*constantFontSize)
     linear(x, y, f)
-    y+=1
+    y+=(1*constantFontSize)
     linear(x, y, f)
-    x-=6
+    x-=(6*constantFontSize)
     linear(x, y, f)
-    y-=1
+    y-=(1*constantFontSize)
     linear(x, y, f)
-    x+=2.5
+    x+=(2.5*constantFontSize)
     linear(x, y, f)
-    y-=8
+    y-=(8*constantFontSize)
     linear(x, y, f)
-    x-=2.5
+    x-=(2.5*constantFontSize)
     linear(x, y, f)
-    y-=1
+    y-=(1*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -425,36 +425,36 @@ def drawI(x, y, f, z):
 
 def drawJ(x, y, f, z):
     startpoint(z)
-    y+=2 
+    y+=(2*constantFontSize) 
     setpoint(x, y, f)
     down(z, f)
-    r=2
+    r=(2*constantFontSize)
     x+=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    x+=2
+    x+=(2*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x+=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    y+=8
+    y+=(8*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
-    y-=8
+    y-=(8*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x-=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    x-=2
+    x-=(2*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x-=r
     y+=r
     clockwiseWthRad(x, y, r, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -464,31 +464,31 @@ def drawK(x, y, f, z):
     startpoint(z)
     setpoint(x, y, f)
     down(z, f)
-    y+=10
+    y+=(10*constantFontSize)
     linear(x, y, f)
-    x+=1
+    x+=(1*constantFontSize)
     linear(x, y, f)
-    y-=4
+    y-=(4*constantFontSize)
     linear(x, y, f)
-    x+=4
-    y+=4
+    x+=(4*constantFontSize)
+    y+=(4*constantFontSize)
     linear(x, y, f)
-    x+=1
+    x+=(1*constantFontSize)
     linear(x, y, f)
-    x-=5
-    y-=5
+    x-=(5*constantFontSize)
+    y-=(5*constantFontSize)
     linear(x, y, f)
-    x+=5
-    y-=5
+    x+=(5*constantFontSize)
+    y-=(5*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
-    x-=4
-    y+=4 
+    x-=(4*constantFontSize)
+    y+=(4*constantFontSize) 
     linear(x, y, f)
-    y-=4
+    y-=(4*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -498,17 +498,17 @@ def drawL(x, y, f, z):
     startpoint(z)
     setpoint(x, y, f)
     down(z, f)
-    y+=10
+    y+=(10*constantFontSize)
     linear(x, y, f)
-    x+=1
+    x+=(1*constantFontSize)
     linear(x, y, f)
-    y-=9
+    y-=(9*constantFontSize)
     linear(x, y, f)
-    x+=5
+    x+=(5*constantFontSize)
     linear(x, y, f)
-    y-=1
+    y-=(1*constantFontSize)
     linear(x, y, f)
-    x-=6
+    x-=(6*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -518,29 +518,29 @@ def drawM(x, y, f, z):
     startpoint(z)
     setpoint(x, y, f)
     down(z, f)
-    y+=10
+    y+=(10*constantFontSize)
     linear(x, y, f)
-    x+=3
-    y-=4
+    x+=(3*constantFontSize)
+    y-=(4*constantFontSize)
     linear(x, y, f)
-    x+=3
-    y+=4
+    x+=(3*constantFontSize)
+    y+=(4*constantFontSize)
     linear(x, y, f)
-    y-=10
+    y-=(10*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
-    y+=7
+    y+=(7*constantFontSize)
     linear(x, y, f)
-    x-=2
-    y-=3
+    x-=(2*constantFontSize)
+    y-=(3*constantFontSize)
     linear(x, y, f)
-    x-=2
-    y+=3
+    x-=(2*constantFontSize)
+    y+=(3*constantFontSize)
     linear(x, y, f)
-    y-=7
+    y-=(7*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -550,31 +550,31 @@ def drawN(x, y, f, z):
     startpoint(z)
     setpoint(x, y, f)
     down(z, f)
-    y+=10
+    y+=(10*constantFontSize)
     linear(x, y, f)
-    x+=5
-    y-=10
+    x+=(5*constantFontSize)
+    y-=(10*constantFontSize)
     linear(x, y, f)
-    x+=1
+    x+=(1*constantFontSize)
     linear(x, y, f)
-    y+=10
+    y+=(10*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
-    y-=10
+    y-=(10*constantFontSize)
     linear(x, y, f)
-    y+=2
+    y+=(2*constantFontSize)
     linear(x, y, f)
-    x-=4
-    y+=8
+    x-=(4*constantFontSize)
+    y+=(8*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
-    x+=1
+    x+=(1*constantFontSize)
     linear(x, y, f)
-    y-=10
+    y-=(10*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -582,42 +582,42 @@ def drawN(x, y, f, z):
 
 def drawO(x, y, f, z):
     startpoint(z)
-    y+=5
+    y+=(5*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    r=5
+    r=(5*constantFontSize)
     x+=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    r=5
+    r=(5*constantFontSize)
     x+=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    r=5
+    r=(5*constantFontSize)
     x-=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    r=5
+    r=(5*constantFontSize)
     x-=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
     up(z, f)
-    x+=1
+    x+=(1*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    r=4
+    r=(4*constantFontSize)
     x+=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    r=4
+    r=(4*constantFontSize)
     x+=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    r=4
+    r=(4*constantFontSize)
     x-=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    r=4
+    r=(4*constantFontSize)
     x-=r
     y-=r
     anticlockwiseWthRad(x, y, r, f) 
@@ -629,42 +629,42 @@ def drawP(x, y, f, z):
     startpoint(z)
     setpoint(x, y, f)
     down(z, f)
-    y+=10
+    y+=(10*constantFontSize)
     linear(x, y, f)
-    x+=3.5
+    x+=(3.5*constantFontSize)
     linear(x, y, f)
-    r=2.5
+    r=(2.5*constantFontSize)
     x+=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    r=2.5
+    r=(2.5*constantFontSize)
     x-=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    x-=2.5
+    x-=(2.5*constantFontSize)
     linear(x, y, f)
-    y-=5
+    y-=(5*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
     up(z, f)
-    x+=1
-    y+=9
+    x+=(1*constantFontSize)
+    y+=(9*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    x+=2.5
+    x+=(2.5*constantFontSize)
     linear(x, y, f)
-    r=1.5
+    r=(1.5*constantFontSize)
     x+=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    r=1.5
+    r=(1.5*constantFontSize)
     x-=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    x-=2.5
+    x-=(2.5*constantFontSize)
     linear(x, y, f)
-    y+=3
+    y+=(3*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -672,39 +672,39 @@ def drawP(x, y, f, z):
 
 def drawQ(x, y, f, z):
     startpoint(z)
-    y+=5 
+    y+=(5*constantFontSize) 
     setpoint(x, y, f)
     down(z, f)
-    r=5
+    r=(5*constantFontSize)
     x+=(r*2)
     clockwiseWthRad(x, y, r, f)
-    r=5
+    r=(5*constantFontSize)
     x-=(r*2)
     clockwiseWthRad(x, y, r, f)
     up(z, f)
-    x+=1
+    x+=(1*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    r=4
+    r=(4*constantFontSize)
     x+=(r*2)
     clockwiseWthRad(x, y, r, f)
-    r=4
+    r=(4*constantFontSize)
     x-=(r*2)
     clockwiseWthRad(x, y, r, f)
     up(z, f)
-    x+=6.5
-    y-=2.5
+    x+=(6.5*constantFontSize)
+    y-=(2.5*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    x+=1
+    x+=(1*constantFontSize)
     linear(x, y, f)
-    x+=1.5
-    y-=2.5
+    x+=(1.5*constantFontSize)
+    y-=(2.5*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
-    x-=1.5
-    y+=2.5
+    x-=(1.5*constantFontSize)
+    y+=(2.5*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -714,47 +714,47 @@ def drawR(x, y, f, z):
     startpoint(z)
     setpoint(x, y, f)
     down(z, f)
-    y+=10
+    y+=(10*constantFontSize)
     linear(x, y, f)
-    x+=3.5
+    x+=(3.5*constantFontSize)
     linear(x, y, f)
-    r=2.5
+    r=(2.5*constantFontSize)
     x+=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    r=2.5
+    r=(2.5*constantFontSize)
     x-=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    x-=2.5
+    x-=(2.5*constantFontSize)
     linear(x, y, f)
-    x+=4
-    y-=5
+    x+=(4*constantFontSize)
+    y-=(5*constantFontSize)
     linear(x, y, f)
-    x+=1
+    x+=(1*constantFontSize)
     linear(x, y, f)
-    x-=4
-    y+=5
+    x-=(4*constantFontSize)
+    y+=(5*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
-    y-=5
+    y-=(5*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
     up(z, f)
-    x+=1
-    y+=9
+    x+=(1*constantFontSize)
+    y+=(9*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    x+=2.5
+    x+=(2.5*constantFontSize)
     linear(x, y, f)
-    r=1.5
+    r=(1.5*constantFontSize)
     y-=(r*2)
     clockwiseWthRad(x, y, r, f)
-    x-=2.5
+    x-=(2.5*constantFontSize)
     linear(x, y, f)
-    y+=3
+    y+=(3*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -762,58 +762,58 @@ def drawR(x, y, f, z):
     
 def drawS(x, y, f, z):
     startpoint(z)
-    y+=2
+    y+=(2*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    r=2
+    r=(2*constantFontSize)
     x+=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    x+=2
+    x+=(2*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x+=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    x-=5
-    y+=6
+    x-=(5*constantFontSize)
+    y+=(6*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x+=r
     y+=r
     clockwiseWthRad(x, y, r, f)
-    x+=2
+    x+=(2*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x+=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    x+=1
+    x+=(1*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x-=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    x-=2
+    x-=(2*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x-=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    x+=5
-    y-=6
+    x+=(5*constantFontSize)
+    y-=(6*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x-=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    x-=2
+    x-=(2*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x-=r
     y+=r
     clockwiseWthRad(x, y, r, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -821,24 +821,24 @@ def drawS(x, y, f, z):
     
 def drawT(x, y, f, z):
     startpoint(z)
-    x+=2.5
+    x+=(2.5*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    x+=1
+    x+=(1*constantFontSize)
     linear(x, y, f)
-    y+=9
+    y+=(9*constantFontSize)
     linear(x, y, f)
-    x+=2.5
+    x+=(2.5*constantFontSize)
     linear(x, y, f)
-    y+=1
+    y+=(1*constantFontSize)
     linear(x, y, f)
-    x-=6
+    x-=(6*constantFontSize)
     linear(x, y, f)
-    y-=1
+    y-=(1*constantFontSize)
     linear(x, y, f)
-    x+=2.5
+    x+=(2.5*constantFontSize)
     linear(x, y, f)
-    y-=9
+    y-=(9*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -846,40 +846,40 @@ def drawT(x, y, f, z):
     
 def drawU(x, y, f, z):
     startpoint(z)
-    y+=10
+    y+=(10*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    y-=8
+    y-=(8*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x+=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    x+=2
+    x+=(2*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x+=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    y+=8
+    y+=(8*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
-    y-=8
+    y-=(8*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x-=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    x-=2
+    x-=(2*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x-=r
     y+=r
     clockwiseWthRad(x, y, r, f)
-    y+=8
+    y+=(8*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -887,73 +887,71 @@ def drawU(x, y, f, z):
        
 def drawV(x, y, f, z):
     startpoint(z)
-    y+=10
+    y+=(10*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    x+=2
-    y-=10
+    x+=(2*constantFontSize)
+    y-=(10*constantFontSize)
     linear(x, y, f)
-    x+=2
+    x+=(2*constantFontSize)
     linear(x, y, f)
-    x+=2
-    y+=10
+    x+=(2*constantFontSize)
+    y+=(10*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
-    x-=2
-    y-=9
+    x-=(2*constantFontSize)
+    y-=(9*constantFontSize)
     linear(x, y, f)
-    x-=2
-    y+=9
+    x-=(2*constantFontSize)
+    y+=(9*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace) 
     
-
-    
 def drawW(x, y, f, z):
     startpoint(z)
-    y+=10
+    y+=(10*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    x+=1
-    y-=10
+    x+=(1*constantFontSize)
+    y-=(10*constantFontSize)
     linear(x, y, f)
-    x+=1
+    x+=(1*constantFontSize)
     linear(x, y, f)
-    x+=1
-    y+=4
+    x+=(1*constantFontSize)
+    y+=(4*constantFontSize)
     linear(x, y, f)
-    x+=1
-    y-=4
+    x+=(1*constantFontSize)
+    y-=(4*constantFontSize)
     linear(x, y, f)
-    x+=1
+    x+=(1*constantFontSize)
     linear(x, y, f)
-    x+=1
-    y+=10
+    x+=(1*constantFontSize)
+    y+=(10*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
-    x-=1
-    y-=10
+    x-=(1*constantFontSize)
+    y-=(10*constantFontSize)
     linear(x, y, f)
-    x+=1
+    x+=(1*constantFontSize)
     linear(x, y, f)
-    y+=7
-    x-=2
+    y+=(7*constantFontSize)
+    x-=(2*constantFontSize)
     linear(x, y, f)
-    x-=2
-    y-=7
+    x-=(2*constantFontSize)
+    y-=(7*constantFontSize)
     linear(x, y, f)
-    x+=1
+    x+=(1*constantFontSize)
     linear(x, y, f)
-    x-=1
-    y+=10
+    x-=(1*constantFontSize)
+    y+=(10*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -963,29 +961,29 @@ def drawX(x, y, f, z):
     startpoint(z)
     setpoint(x, y, f)
     down(z, f)
-    x+=5
-    y+=10
+    x+=(5*constantFontSize)
+    y+=(10*constantFontSize)
     linear(x, y, f)
-    x+=1
+    x+=(1*constantFontSize)
     linear(x, y, f)
-    x-=5
-    y-=10
+    x-=(5*constantFontSize)
+    y-=(10*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
     up(z, f)
-    y+=10
+    y+=(10*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    x+=5
-    y-=10
+    x+=(5*constantFontSize)
+    y-=(10*constantFontSize)
     linear(x, y, f)
-    x+=1
+    x+=(1*constantFontSize)
     linear(x, y, f)
-    x-=5
-    y+=10
+    x-=(5*constantFontSize)
+    y+=(10*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -993,30 +991,30 @@ def drawX(x, y, f, z):
     
 def drawY(x, y, f, z):
     startpoint(z)
-    y+=10
+    y+=(10*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    x+=2.5
-    y-=4
+    x+=(2.5*constantFontSize)
+    y-=(4*constantFontSize)
     linear(x, y, f)
-    y-=6
+    y-=(6*constantFontSize)
     linear(x, y, f)
-    x+=1
+    x+=(1*constantFontSize)
     linear(x, y, f)
-    y+=6
+    y+=(6*constantFontSize)
     linear(x, y, f)
-    x+=2.5
-    y+=4
+    x+=(2.5*constantFontSize)
+    y+=(4*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
-    x-=2
-    y-=3
+    x-=(2*constantFontSize)
+    y-=(3*constantFontSize)
     linear(x, y, f)
-    x-=2
-    y+=3
+    x-=(2*constantFontSize)
+    y+=(3*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -1026,27 +1024,27 @@ def drawZ(x, y, f, z):
     startpoint(z)
     setpoint(x, y, f)
     down(z, f)
-    x+=6
+    x+=(6*constantFontSize)
     linear(x, y, f)
-    y+=1
+    y+=(1*constantFontSize)
     linear(x, y, f)
-    x-=5
+    x-=(5*constantFontSize)
     linear(x, y, f)
-    x+=5
-    y+=9
+    x+=(5*constantFontSize)
+    y+=(8*constantFontSize)
     linear(x, y, f)
-    y+=1
+    y+=(1*constantFontSize)
     linear(x, y, f)
-    x-=6
+    x-=(6*constantFontSize)
     linear(x, y, f)
-    y-=1
+    y-=(1*constantFontSize)
     linear(x, y, f)
-    x+=5
+    x+=(5*constantFontSize)
     linear(x, y, f)
-    x-=5
-    y-=9
+    x-=(5*constantFontSize)
+    y-=(8*constantFontSize)
     linear(x, y, f)
-    y-=1
+    y-=(1*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -1054,23 +1052,23 @@ def drawZ(x, y, f, z):
     
 def draw1(x, y, f, z):
     startpoint(z)
-    y+=8
+    y+=(8*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    y+=0.5
+    y+=(0.5*constantFontSize)
     linear(x, y, f)
-    x+=1.5
-    y+=1.5
+    x+=(1.5*constantFontSize)
+    y+=(1.5*constantFontSize)
     linear(x, y, f)
-    x+=1
+    x+=(1*constantFontSize)
     linear(x, y, f)
-    y-=10
+    y-=(10*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
-    y+=8
+    y+=(8*constantFontSize)
     linear(x, y, f)
-    x-=1.5
+    x-=(1.5*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -1080,32 +1078,32 @@ def draw2(x, y, f, z):
     startpoint(z)
     setpoint(x, y, f)
     down(z, f)
-    x+=6
+    x+=(6*constantFontSize)
     linear(x, y, f)
-    y+=1
+    y+=(1*constantFontSize)
     linear(x, y, f)
-    x-=5
+    x-=(5*constantFontSize)
     linear(x, y, f)
-    x+=5
-    y+=6
+    x+=(5*constantFontSize)
+    y+=(6*constantFontSize)
     linear(x, y, f)
-    r=3
+    r=(3*constantFontSize)
     x-=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    r=3
+    r=(3*constantFontSize)
     x-=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    x+=1
+    x+=(1*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x+=(2*r)
     clockwiseWthRad(x, y, r, f)
-    x-=5
-    y-=6
+    x-=(5*constantFontSize)
+    y-=(6*constantFontSize)
     linear(x, y, f)
-    y-=1
+    y-=(1*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -1113,60 +1111,60 @@ def draw2(x, y, f, z):
 
 def draw3(x, y, f, z):
     startpoint(z)
-    y+=2
+    y+=(2*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    r=2
+    r=(2*constantFontSize)
     x+=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    x+=2
+    x+=(2*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x+=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    y+=2
+    y+=(2*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x-=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    x+=2
-    y+=3
+    x+=(2*constantFontSize)
+    y+=(3*constantFontSize)
     linear(x, y, f)
-    y+=1
+    y+=(1*constantFontSize)
     linear(x, y, f)
-    x-=6
+    x-=(6*constantFontSize)
     linear(x, y, f)
-    y-=1
+    y-=(1*constantFontSize)
     linear(x, y, f)
-    x+=5
+    x+=(5*constantFontSize)
     linear(x, y, f)
-    x-=2
-    y-=3
+    x-=(2*constantFontSize)
+    y-=(3*constantFontSize)
     linear(x, y, f)
-    y-=1
+    y-=(1*constantFontSize)
     linear(x, y, f)
-    x+=1
+    x+=(1*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x+=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    y-=2
+    y-=(2*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x-=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    x-=2
+    x-=(2*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x-=r
     y+=r
     clockwiseWthRad(x, y, r, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -1174,43 +1172,43 @@ def draw3(x, y, f, z):
     
 def draw4(x, y, f, z):
     startpoint(z)
-    y+=2.5
+    y+=(2.5*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    y+=1
+    y+=(1*constantFontSize)
     linear(x, y, f)
-    x+=4
-    y+=6.5
+    x+=(4*constantFontSize)
+    y+=(6.5*constantFontSize)
     linear(x, y, f)
-    x+=1
+    x+=(1*constantFontSize)
     linear(x, y, f)
-    y-=6.5
+    y-=(6.5*constantFontSize)
     linear(x, y, f)
-    x+=1
+    x+=(1*constantFontSize)
     linear(x, y, f)
-    y-=1
+    y-=(1*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
-    y-=2.5
+    y-=(2.5*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
-    y+=2.5
+    y+=(2.5*constantFontSize)
     linear(x, y, f)
-    x-=4
+    x-=(4*constantFontSize)
     linear(x, y, f)
     up(z, f)
-    x+=1
-    y+=1
+    x+=(1*constantFontSize)
+    y+=(1*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    x+=3
+    x+=(3*constantFontSize)
     linear(x, y, f)
-    y+=5
+    y+=(5*constantFontSize)
     linear(x, y, f)
-    x-=3
-    y-=5
+    x-=(3*constantFontSize)
+    y-=(5*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -1218,56 +1216,56 @@ def draw4(x, y, f, z):
     
 def draw5(x, y, f, z):
     startpoint(z)
-    y+=2
+    y+=(2*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    r=2
+    r=(2*constantFontSize)
     x+=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    x+=2
+    x+=(2*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x+=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    y+=3
+    y+=(3*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x-=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    x-=3
+    x-=(3*constantFontSize)
     linear(x, y, f)
-    y+=2
+    y+=(2*constantFontSize)
     linear(x, y, f)
-    x+=5
+    x+=(5*constantFontSize)
     linear(x, y, f)
-    y+=1
+    y+=(1*constantFontSize)
     linear(x, y, f)
-    x-=6
+    x-=(6*constantFontSize)
     linear(x, y, f)
-    y-=4
+    y-=(4*constantFontSize)
     linear(x, y, f)
-    x+=4
+    x+=(4*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x+=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    y-=3
+    y-=(3*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x-=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    x-=2
+    x-=(2*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x-=r
     y+=r
     clockwiseWthRad(x, y, r, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -1275,84 +1273,84 @@ def draw5(x, y, f, z):
     
 def draw6(x, y, f, z):
     startpoint(z)
-    y+=2
+    y+=(2*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    r=2
+    r=(2*constantFontSize)
     x+=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    x+=2
+    x+=(2*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x+=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    y+=2
+    y+=(2*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x-=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    x-=2
+    x-=(2*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x-=r
     y+=r
     clockwiseWthRad(x, y, r, f)
-    y+=1
+    y+=(1*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x+=r
     y+=r
     clockwiseWthRad(x, y, r, f)
-    x+=2
+    x+=(2*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x+=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    x+=1
+    x+=(1*constantFontSize)
     linear(x, y, f) 
-    r=2
+    r=(2*constantFontSize)
     x-=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    x-=2
+    x-=(2*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x-=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    y-=6
+    y-=(6*constantFontSize)
     linear(x, y, f)
     up(z, f)
-    x+=1
+    x+=(1*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    r=1
+    r=(1*constantFontSize)
     x+=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    x+=2
+    x+=(2*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x+=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    y+=2
+    y+=(2*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x-=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    x-=2
+    x-=(2*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x-=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    y-=2
+    y-=(2*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -1360,24 +1358,24 @@ def draw6(x, y, f, z):
     
 def draw7(x, y, f, z):
     startpoint(z)
-    y+=10
+    y+=(10*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    x+=6
+    x+=(6*constantFontSize)
     linear(x, y, f)
-    y-=1
+    y-=(1*constantFontSize)
     linear(x, y, f)
-    x-=5
-    y-=9
+    x-=(5*constantFontSize)
+    y-=(9*constantFontSize)
     linear(x, y, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
-    x+=5
-    y+=9
+    x+=(5*constantFontSize)
+    y+=(9*constantFontSize)
     linear(x, y, f)
-    x-=5
+    x-=(5*constantFontSize)
     linear(x, y, f)
-    y+=1
+    y+=(1*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -1385,108 +1383,108 @@ def draw7(x, y, f, z):
    
 def draw8(x, y, f, z):
     startpoint(z)
-    y+=2
+    y+=(2*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    r=2
+    r=(2*constantFontSize)
     x+=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    x+=2
+    x+=(2*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x+=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    y+=1
+    y+=(1*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x-=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    r=2
+    r=(2*constantFontSize)
     x+=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    y+=1
+    y+=(1*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x-=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    x-=2
+    x-=(2*constantFontSize)
     linear(x, y, f)
-    r=2
-    x-=2
-    y-=r
-    anticlockwiseWthRad(x, y, r, f)
-    y-=1
-    linear(x, y, f)
-    r=2
-    x+=r
-    y-=r
-    anticlockwiseWthRad(x, y, r, f)
-    r=2
+    r=(2*constantFontSize)
     x-=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    y-=1
+    y-=(1*constantFontSize)
+    linear(x, y, f)
+    r=(2*constantFontSize)
+    x+=r
+    y-=r
+    anticlockwiseWthRad(x, y, r, f)
+    r=(2*constantFontSize)
+    x-=r
+    y-=r
+    anticlockwiseWthRad(x, y, r, f)
+    y-=(1*constantFontSize)
     linear(x, y, f)
     up(z, f)
-    x+=1
+    x+=(1*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    r=1
+    r=(1*constantFontSize)
     x+=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    x+=2
+    x+=(2*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x+=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    y+=1
+    y+=(1*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x-=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    x-=2
+    x-=(2*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x-=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    y-=1
+    y-=(1*constantFontSize)
     linear(x, y, f)
     up(z, f)
-    y+=6
+    y+=(6*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    r=1
+    r=(1*constantFontSize)
     x+=r
     y+=r
     clockwiseWthRad(x, y, r, f)
-    x+=2
+    x+=(2*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x+=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    y-=1
+    y-=(1*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x-=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    x-=2
+    x-=(2*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x-=r
     y+=r
     clockwiseWthRad(x, y, r, f)
-    y+=1
+    y+=(1*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -1494,85 +1492,85 @@ def draw8(x, y, f, z):
         
 def draw9(x, y, f, z):
     startpoint(z)
-    y+=2
+    y+=(2*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    r=2
+    r=(2*constantFontSize)
     x+=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    x+=2
+    x+=(2*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x+=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    y+=6
+    y+=(6*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x-=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    x-=2
+    x-=(2*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x-=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    y-=2
+    y-=(2*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x+=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    x+=2
+    x+=(2*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x+=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    y-=1
+    y-=(1*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x-=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    x-=2
+    x-=(2*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x-=r
     y+=r
     clockwiseWthRad(x, y, r, f)
-    x-=1
+    x-=(1*constantFontSize)
     linear(x, y, f)
     up(z, f)
-    x+=1
-    y+=6
+    x+=(1*constantFontSize)
+    y+=(6*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    r=1
+    r=(1*constantFontSize)
     x+=r
     y+=r
     clockwiseWthRad(x, y, r, f)
-    x+=2
+    x+=(2*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x+=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    y-=2
+    y-=(2*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x-=r
     y-=r
     clockwiseWthRad(x, y, r, f)
-    x-=2
+    x-=(2*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x-=r
     y+=r
     clockwiseWthRad(x, y, r, f)
-    y+=2
+    y+=(2*constantFontSize)
     linear(x, y, f) 
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -1580,60 +1578,60 @@ def draw9(x, y, f, z):
     
 def draw0(x, y, f, z):
     startpoint(z)
-    y+=2
+    y+=(2*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    r=2
+    r=(2*constantFontSize)
     x+=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    x+=2
+    x+=(2*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x+=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    y+=6
+    y+=(6*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x-=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    x-=2
+    x-=(2*constantFontSize)
     linear(x, y, f)
-    r=2
+    r=(2*constantFontSize)
     x-=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    y-=6
+    y-=(6*constantFontSize)
     linear(x, y, f)
     up(z, f)
-    x+=1
+    x+=(1*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    r=1
+    r=(1*constantFontSize)
     x+=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    x+=2
+    x+=(2*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x+=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    y+=6
+    y+=(6*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x-=r
     y+=r
     anticlockwiseWthRad(x, y, r, f)
-    x-=2
+    x-=(2*constantFontSize)
     linear(x, y, f)
-    r=1
+    r=(1*constantFontSize)
     x-=r
     y-=r
     anticlockwiseWthRad(x, y, r, f)
-    y-=6
+    y-=(6*constantFontSize)
     linear(x, y, f)
     up(z, f)
     leftSpaceArr.append(leftSpace)
@@ -1641,17 +1639,17 @@ def draw0(x, y, f, z):
     
 def drawHypen(x, y, f, z):
     space = globals()
-    x+=2 
-    y+=4
+    x+=(2*constantFontSize) 
+    y+=(4*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
-    x+=6
+    x+=(6*constantFontSize)
     linear(x, y, f)
-    y+=1
+    y+=(1*constantFontSize)
     linear(x, y, f)
-    x-=6
+    x-=(6*constantFontSize)
     linear(x, y, f)
-    y-=1
+    y-=(1*constantFontSize)
     linear(x, y, f)
     up(z, f)
     space['rightSpace'] +=2 
@@ -1661,15 +1659,16 @@ def drawHypen(x, y, f, z):
 def drawBox(z, f):
     tmpArr.append("G00X17Y-3")
     down(z, f)
-    tmpArr.append("G01X17Y13")
+    hght = (constantFontSize*10)+3
+    tmpArr.append("G01X17Y"+str(round(hght, 2)))
     tmpRightSpace = rightSpace+3
-    tmpArr.append("G01X"+str(round(tmpRightSpace,2))+"Y13"+"F"+str(round(f,2)))
+    tmpArr.append("G01X"+str(round(tmpRightSpace,2))+"Y"+str(round(hght, 2))+"F"+str(round(f,2)))
     tmpArr.append("G01X"+str(round(tmpRightSpace,2))+"Y-2"+"F"+str(round(f,2)))
     tmpArr.append("G01X17Y-3")
     up(z, f)
 
 def drawSpace(x, y, f, z):
-    x+=2
+    x+=(3*constantFontSize)
     setpoint(x, y, f)
     rightSpaceArr.append(rightSpace)
     
@@ -1754,15 +1753,34 @@ def convert(text, x, y, f, z):
             draw0(x, y, f, z)
         case '-':
             drawHypen(x, y, f, z)
+        case ' ':
+            drawSpace(x, y, f, z)
 
-def passText(text, x, y, f, z, space):
+def convertFontSize(fontSize):
+    global constantFontSize
+    match fontSize:
+        case '6*10 units':
+            constantFontSize = 1
+        case '12*20 units':
+            constantFontSize = 2
+        case '18*30 units':
+            constantFontSize = 3
+        case '24*40 unita':
+            constantFontSize = 4
+        case '30*50 units':
+            constantFontSize = 5
+
+def passText(text, x, y, f, z, fontSize):
+    #Set fontSize as global
+    convertFontSize(fontSize)
     txt = list(text)
     for char in txt:
         if(x < rightSpace):
-            x = rightSpace + int(space)
+            x = rightSpace + (1*constantFontSize)
             convert(char, x, y, f, z)
         else:
             convert(char, x, y, f, z)
+    #print(constantFontSize)
 
    
 
