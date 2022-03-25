@@ -14,6 +14,7 @@ class App(tk.Frame):
     def __init__(self):
         self.root = tk.Tk()
         self.root.title("Text to Gcode Convert")
+        self.root.resizable(False, False)
 
         self.textLabel = Label(self.root, text="Text", font=("Khmer UI",15))
         self.textEntry = tk.Entry(self.root, width=27)
