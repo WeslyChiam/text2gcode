@@ -3,23 +3,44 @@
 A python script to convert words and number to gcode for gravier. 
 
 Requirements:
-  1. Python 3.10 or above(This .py script use match case statement, which is newly introduce in Python version 3.10)
+  <ol>
+  <li>Python 3.10 or above(This .py script use match case statement, which is newly introduce in Python version 3.10)</li>
+  <ul>
+  <li>Best way to know which version Python install in your machine, open console or terminal and type "Python", it will show the version it install once enterd</li>
+  <li><a href="https://www.python.org/downloads/release/python-3100/"> Click this link if Python 3.10 is not install</a></li>
+  </ul>
+  <li>a cnc machine(Not necessary if you only want to test the output)</li>
+  <li>cnc machine control software (grbl)<li>
+  <ul>
+    <li>There are few software that can run gcode file, I would recommend <a href="https://github.com/Denvi/Candle">Candle</a>
+  </ul>
+  </ol>
   
 Notes: 
-  If no Python 3.10 or higher installed, it is recommended to use .exe 
+  <ul>
+  <li>If no Python 3.10 or higher installed and you refused to upgrade it, it is recommended to use .exe </li>
+  </ul>
+  
   
 Steps:
-  1. Run main.py or main.exe from dist folder 
-  2. Fill in requirements for each text field,<br>
-    'Text' holds the words or number user wish to convert into G code, <br>
-    'Z' represent as the depth for gravier cut through a board,<br> 
-    'F' represent as the feedrate or speed,<br>
-    'Spacing' means the space between each charater. <br>
-  3. After finish fill up, proceed by press 'Convert' button 
-  4. The script run convert the input by character and show info box when done 
-  5. There will be two output from the script:<br>
-    'Output.txt' is a text field holds the g code command,<br>
-    'Command.nc' is a file ready to be execute 
-    
+<ol>
+<li>Run main.py or main.exe</li>
+<li>Fill in requirements for each text field,</li>
+  <ul>
+  <li>'Text' holds the words or number user wish to convert into G code.</li>
+  <li>'Z' represent as the depth for gravier cut through a board.</li>
+  <li>'F' represent as the feedrate or speed.</li>
+  <li>'Font Size' means size of the Text, each character is measured by width x height in cm unit.</li>
+  <li>The checkbox "Include Box Surround" will cover the text in a rectangle box.</li>
+  </ul>
+<li>After finish fill up, proceed by press 'Convert' button</li>
+<li>The script run convert the input by character and show info box when done</li>
+<li>There will be two output from the script:</li>
+  <ul>
+  <li>'Output.txt' is a text field holds the g code command</li>
+  <li>'Command.nc' is a file ready to be execute by cnc machine</li>
+  </ul>
+</ol>
+  
 Any issues or bug found, please inform and I will try to correct it. 
 Thanks. 
