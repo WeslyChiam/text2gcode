@@ -8,6 +8,7 @@ import tkinter.messagebox as messagebox
 import formula
 import generate
 import os.path
+import sys
 
 class App(tk.Frame):
     #Widget Section
@@ -26,14 +27,33 @@ class App(tk.Frame):
         self.speedEntry = tk.Entry(self.root, width=27)
         self.submitBtn = tk.Button(self.root, text="Convert", command=self.getInput)
         self.quitBtn = tk.Button(self.root, text="Cancel", command=self.root.destroy)
-        self.sizeLabel = Label(self.root, text="Font Size(cm):", font=("Khmer UI",15))
+        self.sizeLabel = Label(self.root, text="Font Size:", font=("Khmer UI",15))
         self.sizeInp = StringVar(self.root)
         self.sizeOpt = ttk.Combobox(self.root, state="readonly" ,width=25, textvariable=self.sizeInp)
-        self.sizeOpt['values'] = ('6*10 units',
-                                  '12*20 units',
-                                  '18*30 units',
-                                  '24*40 unita',
-                                  '30*50 units')    
+        self.sizeOpt['values'] = ('6*10',
+                                  '12*20',
+                                  '18*30',
+                                  '24*40',
+                                  '30*50',
+                                  '36*60',
+                                  '42*70',
+                                  '48*80',
+                                  '54*90',
+                                  '60*100',
+                                  '66*110',
+                                  '72*120',
+                                  '78*130')
+        self.unitInp = StringVar(self.root)
+        self.unitLabel = Label(self.root, text="Unit", font=("Khmer UI", 15))
+        self.unitOpt = ttk.Combobox(self.root, state="readonly", width=25, textvariable=self.unitInp)
+        self.unitOpt['values'] = ('mm','cm')
+
+            #Function for key
+        def close(event):
+            self.root.withdraw()
+            sys.exit()
+        
+        self.root.bind('<Escape>', close)
 
         #Widget Placement
         self.textLabel.grid(row=0, column=0, sticky=W, pady=2)
@@ -45,9 +65,12 @@ class App(tk.Frame):
         self.sizeLabel.grid(row=3, column=0, sticky=W, pady=2)
         self.sizeOpt.grid(row=3, column=1, sticky=W, pady=2)
         self.sizeOpt.current(0)
-        self.boxCheck.grid(row=4, column=0, sticky=W, columnspan=2)
-        self.quitBtn.grid(row=4, column=2, sticky=E)
-        self.submitBtn.grid(row=4, column=3, sticky=E)
+        self.unitLabel.grid(row=4, column=0, sticky=W, pady=2)
+        self.unitOpt.grid(row=4, column=1, stick=W, pady=2)
+        self.unitOpt.current(0)
+        self.boxCheck.grid(row=5, column=0, sticky=W, columnspan=2)
+        self.quitBtn.grid(row=5, column=2, sticky=E)
+        self.submitBtn.grid(row=5, column=3, sticky=E)
         self.root.mainloop()
 
     #Functions for Widget
@@ -56,6 +79,7 @@ class App(tk.Frame):
         inputZ = self.depthEntry.get()
         inputF = self.speedEntry.get()
         sizeInp = self.sizeInp.get()
+        unitInp = self.unitInp.get()
         if(inputTxt != "" and inputZ != "" and inputF != "" and float(inputZ) and inputF.isdigit()):
             inputTxt = inputTxt.upper()
             inputZ = float(inputZ)
@@ -72,15 +96,16 @@ class App(tk.Frame):
                  messagebox.showerror("Error", "Unable to Proceed, please remove output.txt")
             #split text
             #y is always start from 0 and x will always star from left side of the character 
-            formula.passText(inputTxt, 20, 0, inputF, inputZ,sizeInp)
+            formula.passText(inputTxt, 20, 0, inputF, inputZ, sizeInp, unitInp)
             if(self.box.get() == 1):
                 formula.drawBox(inputZ, inputF)
             formula.finalDraw()
             generate.convert()
             messagebox.showinfo("Done!", "Please find command.nc from the source file")
-            messagebox.showwarning("Please Note!", "Any duplicated command.nc will be replaced by new one, please remember to save at other location after complete.")
+            messagebox.showwarning("Please Note!", "Any duplicated command.nc will be replaced by new one, please remember to save at other location or rename it after complete.")
             self.root.destroy()
         else:
             messagebox.showerror("Error!", "Please fill all of the required field")
+
 
 app = App()
