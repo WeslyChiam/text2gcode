@@ -18,26 +18,26 @@ Requirements:
   
 Notes: 
   <ul>
-  <li>If no Python 3.10 or higher installed and you refused to upgrade it, it is recommended to use .exe </li>
+  <li>If no Python 3.10 or higher installed and you prefer to not install, it is recommended to use .exe </li>
   </ul>
   
   
 Steps:
 <ol>
-<li>Run main.py or main.exe</li>
+<li>Run main.py(by console) or main.exe</li>
 <li>Fill in requirements for each text field,</li>
   <ul>
   <li>'Text' holds the words or number user wish to convert into G code.</li>
   <li>'Z' represent as the depth for gravier cut through a board.</li>
   <li>'F' represent as the feedrate or speed.</li>
   <li>'Font Size' means size of the Text, each character is measured by width x height in cm unit.</li>
+  <li>'Unit' offers to choose whether the text will be done in mm unit or cm unit</li>
   <li>The checkbox "Include Box Surround" will cover the text in a rectangle box.</li>
   </ul>
 <li>After finish fill up, proceed by press 'Convert' button</li>
 <li>The script run convert the input by character and show info box when done</li>
 <li>There will be two output from the script:</li>
   <ul>
-  <li>'Output.txt' is a text field holds the g code command</li>
   <li>'Command.nc' is a file ready to be execute by cnc machine</li>
   </ul>
 </ol>
