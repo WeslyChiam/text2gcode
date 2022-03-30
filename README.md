@@ -32,6 +32,7 @@ Steps:
   <li>'F' represent as the feedrate or speed.</li>
   <li>'Font Size' means size of the Text, each character is measured by width x height in cm unit.</li>
   <li>'Unit' offers to choose whether the text will be done in mm unit or cm unit</li>
+  <li>'Drill Speed' holds the value to tell the machine how fast the drill will be run</li>
   <li>The checkbox "Include Box Surround" will cover the text in a rectangle box.</li>
   </ul>
 <li>After finish fill up, proceed by press 'Convert' button</li>
