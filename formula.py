@@ -39,12 +39,12 @@ def setpoint(x, y, f):
     checkSpace(leftSpace, rightSpace, x)
     tmpArr.append("G00X"+str(x)+"Y"+str(y)+"F"+str(f))
 
-def startpoint(z):
+def startpoint(z, speed):
     tmpArr.append("G00Z"+str(round(z,2)))
-    tmpArr.append("M03S300")
+    tmpArr.append("M03S"+str(round(speed, 2)))
 
-def drawA(x, y, f, z): #UPDATED FORMULA AND TEST RUN
-    startpoint(z)
+def drawA(x, y, f, z, speed): #UPDATED FORMULA AND TEST RUN
+    startpoint(z, speed)
     setpoint(x, y, f)
     down(z, f)
     x+=(3*constantFontSize)
@@ -81,8 +81,8 @@ def drawA(x, y, f, z): #UPDATED FORMULA AND TEST RUN
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)
 
-def drawB(x, y, f, z): #UPDATED FORMULA AND TEST RUN 
-    startpoint(z)
+def drawB(x, y, f, z, speed): #UPDATED FORMULA AND TEST RUN 
+    startpoint(z, speed)
     setpoint(x, y, f)
     down(z, f)
     y+=(10*constantFontSize)
@@ -141,8 +141,8 @@ def drawB(x, y, f, z): #UPDATED FORMULA AND TEST RUN
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)
     
-def drawC(x, y, f, z): #UPDATED FORMULA AND TEST RUN
-    startpoint(z)
+def drawC(x, y, f, z, speed): #UPDATED FORMULA AND TEST RUN
+    startpoint(z, speed)
     y+=(2*constantFontSize) 
     setpoint(x, y, f)
     down(z, f)
@@ -198,8 +198,8 @@ def drawC(x, y, f, z): #UPDATED FORMULA AND TEST RUN
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)
 
-def drawD(x, y, f, z): #TEST RUN DONE
-    startpoint(z)
+def drawD(x, y, f, z, speed): #TEST RUN DONE
+    startpoint(z, speed)
     setpoint(x, y, f)
     down(z, f)
     y+=(10*constantFontSize)
@@ -235,8 +235,8 @@ def drawD(x, y, f, z): #TEST RUN DONE
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)
 
-def drawE(x, y, f, z): #TEST RUN DONE
-    startpoint(z)
+def drawE(x, y, f, z, speed): #TEST RUN DONE
+    startpoint(z, speed)
     setpoint(x, y, f)
     down(z, f)
     y+=(10*constantFontSize)
@@ -267,8 +267,8 @@ def drawE(x, y, f, z): #TEST RUN DONE
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)
 
-def drawF(x, y, f, z): #TEST RUN DONE
-    startpoint(z)
+def drawF(x, y, f, z, speed): #TEST RUN DONE
+    startpoint(z, speed)
     setpoint(x, y, f)
     down(z, f)
     y+=(10*constantFontSize)
@@ -295,8 +295,8 @@ def drawF(x, y, f, z): #TEST RUN DONE
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)
 
-def drawG(x, y, f, z): #TEST RUN DONE
-    startpoint(z)
+def drawG(x, y, f, z, speed): #TEST RUN DONE
+    startpoint(z, speed)
     y+=(2*constantFontSize) 
     setpoint(x, y, f)
     down(z, f)
@@ -360,8 +360,8 @@ def drawG(x, y, f, z): #TEST RUN DONE
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)
 
-def drawH(x, y, f, z):
-    startpoint(z)
+def drawH(x, y, f, z, speed):
+    startpoint(z, speed)
     setpoint(x, y, f)
     down(z, f)
     y+=(10*constantFontSize)
@@ -392,8 +392,8 @@ def drawH(x, y, f, z):
     leftSpaceArr.append(leftSpace) 
     rightSpaceArr.append(rightSpace)
 
-def drawI(x, y, f, z):
-    startpoint(z)
+def drawI(x, y, f, z, speed):
+    startpoint(z, speed)
     setpoint(x, y, f)
     down(z, f)
     x+=(6*constantFontSize)
@@ -424,8 +424,8 @@ def drawI(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)
 
-def drawJ(x, y, f, z):
-    startpoint(z)
+def drawJ(x, y, f, z, speed):
+    startpoint(z, speed)
     y+=(2*constantFontSize) 
     setpoint(x, y, f)
     down(z, f)
@@ -461,8 +461,8 @@ def drawJ(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)
 
-def drawK(x, y, f, z):
-    startpoint(z)
+def drawK(x, y, f, z, speed):
+    startpoint(z, speed)
     setpoint(x, y, f)
     down(z, f)
     y+=(10*constantFontSize)
@@ -495,8 +495,8 @@ def drawK(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)
 
-def drawL(x, y, f, z):
-    startpoint(z)
+def drawL(x, y, f, z, speed):
+    startpoint(z, speed)
     setpoint(x, y, f)
     down(z, f)
     y+=(10*constantFontSize)
@@ -515,8 +515,8 @@ def drawL(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)
 
-def drawM(x, y, f, z):
-    startpoint(z)
+def drawM(x, y, f, z, speed):
+    startpoint(z, speed)
     setpoint(x, y, f)
     down(z, f)
     y+=(10*constantFontSize)
@@ -547,8 +547,8 @@ def drawM(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)
 
-def drawN(x, y, f, z):
-    startpoint(z)
+def drawN(x, y, f, z, speed):
+    startpoint(z, speed)
     setpoint(x, y, f)
     down(z, f)
     y+=(10*constantFontSize)
@@ -581,8 +581,8 @@ def drawN(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)
 
-def drawO(x, y, f, z):
-    startpoint(z)
+def drawO(x, y, f, z, speed):
+    startpoint(z, speed)
     y+=(5*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
@@ -626,8 +626,8 @@ def drawO(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)
 
-def drawP(x, y, f, z):
-    startpoint(z)
+def drawP(x, y, f, z, speed):
+    startpoint(z, speed)
     setpoint(x, y, f)
     down(z, f)
     y+=(10*constantFontSize)
@@ -671,8 +671,8 @@ def drawP(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)
 
-def drawQ(x, y, f, z):
-    startpoint(z)
+def drawQ(x, y, f, z, speed):
+    startpoint(z, speed)
     y+=(5*constantFontSize) 
     setpoint(x, y, f)
     down(z, f)
@@ -711,8 +711,8 @@ def drawQ(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)
 
-def drawR(x, y, f, z):
-    startpoint(z)
+def drawR(x, y, f, z, speed):
+    startpoint(z, speed)
     setpoint(x, y, f)
     down(z, f)
     y+=(10*constantFontSize)
@@ -761,8 +761,8 @@ def drawR(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)
     
-def drawS(x, y, f, z):
-    startpoint(z)
+def drawS(x, y, f, z, speed):
+    startpoint(z, speed)
     y+=(2*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
@@ -820,8 +820,8 @@ def drawS(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace) 
     
-def drawT(x, y, f, z):
-    startpoint(z)
+def drawT(x, y, f, z, speed):
+    startpoint(z, speed)
     x+=(2.5*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
@@ -845,8 +845,8 @@ def drawT(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace) 
     
-def drawU(x, y, f, z):
-    startpoint(z)
+def drawU(x, y, f, z, speed):
+    startpoint(z, speed)
     y+=(10*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
@@ -886,8 +886,8 @@ def drawU(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace) 
        
-def drawV(x, y, f, z):
-    startpoint(z)
+def drawV(x, y, f, z, speed):
+    startpoint(z, speed)
     y+=(10*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
@@ -913,8 +913,8 @@ def drawV(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace) 
     
-def drawW(x, y, f, z):
-    startpoint(z)
+def drawW(x, y, f, z, speed):
+    startpoint(z, speed)
     y+=(10*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
@@ -958,8 +958,8 @@ def drawW(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace) 
     
-def drawX(x, y, f, z):
-    startpoint(z)
+def drawX(x, y, f, z, speed):
+    startpoint(z, speed)
     setpoint(x, y, f)
     down(z, f)
     x+=(5*constantFontSize)
@@ -990,8 +990,8 @@ def drawX(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace) 
     
-def drawY(x, y, f, z):
-    startpoint(z)
+def drawY(x, y, f, z, speed):
+    startpoint(z, speed)
     y+=(10*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
@@ -1021,8 +1021,8 @@ def drawY(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace) 
     
-def drawZ(x, y, f, z):
-    startpoint(z)
+def drawZ(x, y, f, z, speed):
+    startpoint(z, speed)
     setpoint(x, y, f)
     down(z, f)
     x+=(6*constantFontSize)
@@ -1051,8 +1051,8 @@ def drawZ(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace) 
     
-def draw1(x, y, f, z):
-    startpoint(z)
+def draw1(x, y, f, z, speed):
+    startpoint(z, speed)
     y+=(8*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
@@ -1075,8 +1075,8 @@ def draw1(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace) 
     
-def draw2(x, y, f, z):
-    startpoint(z)
+def draw2(x, y, f, z, speed):
+    startpoint(z, speed)
     setpoint(x, y, f)
     down(z, f)
     x+=(6*constantFontSize)
@@ -1110,8 +1110,8 @@ def draw2(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace) 
 
-def draw3(x, y, f, z):
-    startpoint(z)
+def draw3(x, y, f, z, speed):
+    startpoint(z, speed)
     y+=(2*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
@@ -1171,8 +1171,8 @@ def draw3(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace) 
     
-def draw4(x, y, f, z):
-    startpoint(z)
+def draw4(x, y, f, z, speed):
+    startpoint(z, speed)
     y+=(2.5*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
@@ -1215,8 +1215,8 @@ def draw4(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace) 
     
-def draw5(x, y, f, z):
-    startpoint(z)
+def draw5(x, y, f, z, speed):
+    startpoint(z, speed)
     y+=(2*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
@@ -1272,8 +1272,8 @@ def draw5(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace) 
     
-def draw6(x, y, f, z):
-    startpoint(z)
+def draw6(x, y, f, z, speed):
+    startpoint(z, speed)
     y+=(2*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
@@ -1357,8 +1357,8 @@ def draw6(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)     
     
-def draw7(x, y, f, z):
-    startpoint(z)
+def draw7(x, y, f, z, speed):
+    startpoint(z, speed)
     y+=(10*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
@@ -1382,8 +1382,8 @@ def draw7(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)  
    
-def draw8(x, y, f, z):
-    startpoint(z)
+def draw8(x, y, f, z, speed):
+    startpoint(z, speed)
     y+=(2*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
@@ -1491,8 +1491,8 @@ def draw8(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)   
         
-def draw9(x, y, f, z):
-    startpoint(z)
+def draw9(x, y, f, z, speed):
+    startpoint(z, speed)
     y+=(2*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
@@ -1577,8 +1577,8 @@ def draw9(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace)   
     
-def draw0(x, y, f, z):
-    startpoint(z)
+def draw0(x, y, f, z, speed):
+    startpoint(z, speed)
     y+=(2*constantFontSize)
     setpoint(x, y, f)
     down(z, f)
@@ -1638,7 +1638,7 @@ def draw0(x, y, f, z):
     leftSpaceArr.append(leftSpace)
     rightSpaceArr.append(rightSpace) 
     
-def drawHypen(x, y, f, z):
+def drawHypen(x, y, f, z, speed):
     space = globals()
     x+=(1*constantFontSize) 
     y+=(4*constantFontSize)
@@ -1670,7 +1670,7 @@ def drawBox(z, f):
     tmpArr.append("G01X"+str(round(tmpLeft, 2))+"Y-"+str(round(hght, 2)))
     up(z, f)
 
-def drawSpace(x, y, f, z):
+def drawSpace(x, y, f, z, speed):
     x+=(3*constantFontSize)
     setpoint(x, y, f)
     rightSpaceArr.append(rightSpace)
@@ -1680,85 +1680,85 @@ def finalDraw():
         for i in tmpArr:
             txt.write(i+"\n")
     
-def convert(text, x, y, f, z):
+def convert(text, x, y, f, z, speed):
     checkSpace = globals()
     match text:
         case 'A':
-            drawA(x, y, f, z)
+            drawA(x, y, f, z, speed)
         case 'B':
-            drawB(x, y, f, z)
+            drawB(x, y, f, z, speed)
         case 'C':
-            drawC(x, y, f, z)
+            drawC(x, y, f, z, speed)
         case 'D':
-            drawD(x, y, f, z)
+            drawD(x, y, f, z, speed)
         case 'E':
-            drawE(x, y, f, z)
+            drawE(x, y, f, z, speed)
         case 'F':
-            drawF(x, y, f, z)
+            drawF(x, y, f, z, speed)
         case 'G':
-            drawG(x, y, f, z)
+            drawG(x, y, f, z, speed)
         case 'H':
-            drawH(x, y, f, z)
+            drawH(x, y, f, z, speed)
         case 'I':
-            drawI(x, y, f, z)
+            drawI(x, y, f, z, speed)
         case 'J':
-            drawJ(x, y, f, z)
+            drawJ(x, y, f, z, speed)
         case 'K':
-            drawK(x, y, f, z)
+            drawK(x, y, f, z, speed)
         case 'L':
-            drawL(x, y, f, z)
+            drawL(x, y, f, z, speed)
         case 'M':
-            drawM(x, y, f, z)
+            drawM(x, y, f, z, speed)
         case 'N':
-            drawN(x, y, f, z)
+            drawN(x, y, f, z, speed)
         case 'O':
-            drawO(x, y, f, z)
+            drawO(x, y, f, z, speed)
         case 'P':
-            drawP(x, y, f, z)
+            drawP(x, y, f, z, speed)
         case 'Q':
-            drawQ(x, y, f, z)
+            drawQ(x, y, f, z, speed)
         case 'R':
-            drawR(x, y, f, z)
+            drawR(x, y, f, z, speed)
         case 'S':
-            drawS(x, y, f, z)
+            drawS(x, y, f, z, speed)
         case 'T':
-            drawT(x, y, f, z)
+            drawT(x, y, f, z, speed)
         case 'U':
-            drawU(x, y, f, z)
+            drawU(x, y, f, z, speed)
         case 'V':
-            drawV(x, y, f, z)
+            drawV(x, y, f, z, speed)
         case 'W':
-            drawW(x, y, f, z)
+            drawW(x, y, f, z, speed)
         case 'X':
-            drawX(x, y, f, z)
+            drawX(x, y, f, z, speed)
         case 'Y':
-            drawY(x, y, f, z)
+            drawY(x, y, f, z, speed)
         case 'Z':
-            drawZ(x, y, f, z)
+            drawZ(x, y, f, z, speed)
         case '1':
-            draw1(x, y, f, z)
+            draw1(x, y, f, z, speed)
         case '2':
-            draw2(x, y, f, z)
+            draw2(x, y, f, z, speed)
         case '3':
-            draw3(x, y, f, z)
+            draw3(x, y, f, z, speed)
         case '4':
-            draw4(x, y, f, z)
+            draw4(x, y, f, z, speed)
         case '5':
-            draw5(x, y, f, z)
+            draw5(x, y, f, z, speed)
         case '6':
-            draw6(x, y, f, z)
+            draw6(x, y, f, z, speed)
         case '7':
-            draw7(x, y, f, z)
+            draw7(x, y, f, z, speed)
         case '8':
-            draw8(x, y, f, z)
+            draw8(x, y, f, z, speed)
         case '9':
-            draw9(x, y, f, z)
+            draw9(x, y, f, z, speed)
         case '0':
-            draw0(x, y, f, z)
+            draw0(x, y, f, z, speed)
         case '-':
-            drawHypen(x, y, f, z)
+            drawHypen(x, y, f, z, speed)
         case ' ':
-            drawSpace(x, y, f, z)
+            drawSpace(x, y, f, z, speed)
 
 def unitConvert(unit):
     match unit:
@@ -1798,7 +1798,7 @@ def convertFontSize(fontSize, unit):
         case '78*130':
             constantFontSize = 13 * unit
 
-def passText(text, x, y, f, z, fontSize, unit):
+def passText(text, x, y, f, z, fontSize, unit, speed):
     #Set fontSize as global
     intUnit = unitConvert(unit)
     convertFontSize(fontSize, intUnit)
@@ -1806,9 +1806,9 @@ def passText(text, x, y, f, z, fontSize, unit):
     for char in txt:
         if(x < rightSpace):
             x = rightSpace + (2*constantFontSize)
-            convert(char, x, y, f, z)
+            convert(char, x, y, f, z, speed)
         else:
-            convert(char, x, y, f, z)
+            convert(char, x, y, f, z, speed)
     #print(constantFontSize)
 
    
