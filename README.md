@@ -10,7 +10,7 @@ Requirements:
 3. cnc machine control software (grbl)
     - There are few software that can run gcode file, I would recommend [Candle](https://github.com/Denvi/Candle)
 ## Notes:
-  - If no Python 3.10 or higher installed and you prefer to not install, it is recommended to use .exe
+  - If no Python 3.10 or higher installed and you prefer to not install, it is recommended to use .exe instead.
 ## Steps:
  1. Run `main.py`(by console) or `main.exe`
  2. Fill in requirements for each text field,
